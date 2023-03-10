@@ -1,0 +1,254 @@
+/* /////////////////// Smooth Scroll /////////////////////////// */
+#about {
+    margin-top: 0;
+    /* border: 2px solid red;*/
+    background: #485461;
+    height: 1000px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #about {
+        height: 500px;
+    }
+}
+
+#projects {
+    margin-top: 0;
+    /* border: 6px double green;*/
+    background: #485461;
+    height: 1000px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #projects {
+        margin-top: 1000px;
+        height: 1000px;
+    }
+}
+
+#contact {
+    margin-top: 0;
+    /*border: 2px solid red;*/
+    background: #485461;
+    height: 1000px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #contact {
+        margin-top: 1000px;
+        height: 1000px;
+    }
+}
+
+/* ///////////////////////////  Cube Menu  /////////////////////////// */
+
+.cube-wrap {
+    --size: 30vmin;
+    position: sticky;
+    top: 50%;
+    left: 20vw;
+    width: 0;
+    height: 0;
+    perspective: 100vmin;
+}
+
+@media screen and (max-width:1536px) {
+    .cube-wrap {
+                transform: scale(0.9);
+        left: 18vw;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .cube-wrap {
+        transform: scale(0.75);
+        left: 18vw;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .cube-wrap {
+        transform: scale(0.55);
+        left: 18vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cube-wrap {
+        
+    }
+}
+
+@media screen and (max-width:375px) {
+    .cube-wrap {
+       
+
+    }
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateZ(45deg) rotateY(-45deg);
+    animation: cube 1s linear;
+    
+}
+
+@keyframes cube {
+    to {
+        transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+    }
+}
+    @media screen and (max-width:768px) {
+    .cube {
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+
+    }
+    }
+
+.side {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    backface-visibility: visible;
+    top: calc(var(--size) * -.5);
+    left: calc(var(--size) * -.5);
+    transform: rotate(270deg);
+    border: solid grey 1px;
+    border-radius: 3%;
+}
+
+
+
+.front {
+    background-color: #FEBE10;
+    transform: translateZ(calc(var(--size) * .5));
+    transition: transform 1s linear;
+    transform-origin: top left;
+    transform-style: preserve-3D;
+}
+
+.back {
+    background-color: #485461;
+    transform: translateZ(calc(var(--size) * -.5));
+    transition: transform 1s linear;
+    transform-origin: top left;
+    transform-style: preserve-3D;
+    border: solid black 1px;
+
+}
+
+.middle {
+    background-color: #eee;
+}
+
+
+p {
+    position: relative;
+    top: -40%;
+}
+
+button {
+    border: none;
+    height: 60px;
+    cursor: pointer;
+}
+
+button:before {
+    content: '';
+    background: #485461;
+    opacity: 0.7;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: all 0.25s ease-in-out;
+    border-radius: 5px;
+}
+
+.about-button {
+    background-color: #FEBE10;
+    color: #485461;
+    font-size: 2rem;
+}
+
+
+.about-button:hover::before {
+    border: solid black 1px;
+    background-color: #485461;
+    width: 100%;
+
+}
+
+.projects-button {
+    background-color: #eee;
+    color: #485461;
+    font-size: 1.75rem;
+}
+
+.projects-button:hover::before {
+    border: solid #485461 1px;
+    width: 100%;
+    background-color: #FEBE10;
+    width: 100%;
+
+}
+
+.contact-button {
+    background-color: #485461;
+    color: #FEBE10;
+    font-size: 1.5rem;
+}
+
+.contact-button:hover::before {
+    border: solid black 1.5px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+
+
+/* //////////// Cards ///////////////////////////////// */
+
+.about {
+    color: #485461;
+    background-color: #FEBE10;
+    transform: rotate(270deg);
+    position: relative;
+    left: 100px;
+}
+
+
+
+.projects {
+    background-color: #eee;
+    position: relative;
+    top: -10px;
+}
+
+
+.contact {
+    color: #FEBE10;
+    background-color: #485461;
+
+    transform: rotate(270deg);
+    position: relative;
+    left: 100px;
+}
+
+:root * {
+    /* Pause the  */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
