@@ -2,14 +2,13 @@ export const heroOne = {
   reverse: true,
   inverse: true,
   topLine: {
-    text: "Montreal based",
+    text: "Freelance Project",
   },
-  headline: "Providing solutions since 2022",
-  description: "Proud to serve our community",
-  buttonLabel: "Learn More",
+  headline: "Ludmer Engineering",
+  description: "Static website for a Montreal based engineering firm",
   linkTo: "/about",
   imgStart: "start",
-  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1677516246/mtlCrane_px9vdq.png",
+  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678550808/ludmer_vm05bq.png",
   start: "true",
 };
 
@@ -17,15 +16,15 @@ export const heroTwo = {
   reverse: false,
   inverse: false,
   topLine: {
-    text: "Designed & Developed",
+    text: "River Surfing App",
   },
-  headline: "The best practices",
-  description: "Our clients have had the best experience working with us",
+  headline: "River Quiver",
+  description: "Concordia Bootcamp final project: Full-Stack MERN application",
   buttonLabel: "View Projects",
 
   linkTo: "/projects",
   imgStart: "start",
-  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1676738133/Ludmer%20Engineering/Project%202/IMG_5042_vxs71f.jpg",
+  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678550810/RQ2_z2sxmr.png",
   start: "true",
 };
 
@@ -33,16 +32,16 @@ export const heroThree = {
   reverse: true,
   inverse: true,
   topLine: {
-    text: "Highly reputed brand",
+    text: "E-Commerce",
   },
-  headline: "Why us? ",
+  headline: "GoGo Gadgets ",
   description:
-    "Our experience has allowed us to use the most innovative technologies and methodologies",
+    "Concordia Bootcamp group project: full-stack e-commerce website",
   buttonLabel: "View Project",
 
-  linkTo: "/contact",
+  linkTo: "",
   imgStart: "",
-  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1676738138/Ludmer%20Engineering/Project%203/img1.jpg",
+  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678222645/Gogo_w4ahah.png",
   start: "true",
 };
 

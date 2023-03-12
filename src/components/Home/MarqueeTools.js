@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 import styled from "styled-components";
-import { tools } from "../../Data/Tools";
+import { tools } from "../../data/Tools";
 
 const MarqueeTools = () => {
   

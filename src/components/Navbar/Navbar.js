@@ -12,8 +12,13 @@ const Navbar = () => {
       <Wrapper>
         <Menu />
         <StyledNavbar>
-        <Logo>EM.</Logo>
-        <NavButton>&#8801;</NavButton>
+          <Logo>
+            <div>
+              <h2>EM.</h2>
+              <h2>EM.</h2>
+            </div>
+          </Logo>
+          <NavButton>&#8801;</NavButton>
         </StyledNavbar>
       </Wrapper>
     </>

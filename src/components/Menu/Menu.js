@@ -37,9 +37,9 @@ const Menu = () => {
             </p>
           </div>
           <div class="side back">
-            <p class="contact">
-              <AnchorLink href="#contact">
-                <button class="contact-button">Contact</button>
+            <p class="skills">
+              <AnchorLink href="#skills">
+                <button class="skills-button">My Skills</button>
               </AnchorLink>
             </p>
           </div>

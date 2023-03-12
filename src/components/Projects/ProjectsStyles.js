@@ -2,21 +2,23 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContentRow = styled.div`
+ /* border: solid blue 5px;*/
+background-color:#485461;
   display: flex;
-  margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
+  padding:50px 0;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
-  justify-content: space-around;
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
-  `;
+`;
 
 export const ContentColumn = styled(motion.div)`
-  margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
+ /* border: solid black 5px;*/
+background-color:#485461;
+
+ padding:10px;
   flex: 1;
   z-index: 10;
   display: flex;
@@ -26,12 +28,15 @@ export const ContentColumn = styled(motion.div)`
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
+  
   }
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
+  background-color: #485461;
+
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
     > h1,
@@ -57,12 +62,7 @@ export const ImgWrapper = styled(motion.div)`
   z-index: -1;
 `;
 
-export const StyledMap = styled(motion.div)`
-  width: 40vw;
-  height: 50vh;
-  padding-top: 40px;
-  padding-bottom: 40px;
-`;
+
 
 export const TopLine = styled(motion.div)`
   font-size: 0.9rem;
@@ -70,7 +70,8 @@ export const TopLine = styled(motion.div)`
   font-weight: 550;
   letter-spacing: 1.4px;
   margin-bottom: 1.3rem;
-  color: #979797;
+  color: #febe10;
+  background-color: #485461;
 `;
 
 export const Img = styled(motion.img)`
@@ -86,11 +87,12 @@ export const Img = styled(motion.img)`
 
 
 export const Heading = styled(motion.h2)`
+  background-color: #485461;
   margin-bottom: 24px;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+  color: ${({ inverse }) => (inverse ? "#fffbe6" : "white")};
   @media screen and (max-width: 768px) {
     text-align: center;
   }
@@ -100,7 +102,9 @@ export const Subtitle = styled(motion.p)`
   max-width: 440px;
   margin-bottom: 35px;
   line-height: 24px;
-  color: ${({ inverse }) => (inverse ? "#6a6a6a" : "white")};
+  background-color: #485461;
+
+  color: ${({ inverse }) => (inverse ? "#fffbe6" : "white")};
 `;
 
 export const ContentButton = styled(motion.button)`

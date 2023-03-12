@@ -12,19 +12,17 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  /*border: solid yellowgreen 5px;*/
   width: 100%;
-  max-width: 1300px;
-  margin: 55px auto 0 auto;
-  padding: 0 50px;
-  @media screen and (max-width: 960px) {
-    padding: 0 30px;
+  @media screen and (max-width: 768px) {
+
   }
 `;
 export const MainHeading = styled.h1`
   font-size: clamp(2.3rem, 3vw, 4.5rem);
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/clamp */
   margin-bottom: 2rem;
-  /* Because styles are wrapper in backticks, everything in  between is considered a string. Therefore, when you use ${{}} it becomes vanilla JS and {()} is a functional component and insidea props is passed */
+  /* Because styles are wrapper in backticks, everything in  between is considered a string. Therefore, when you use ${{}} it becomes vanilla JS and {()} is a functional component and inside a props is passed */
   color: #15202b;
   margin-top: 180px;
   width: 100%;
@@ -75,18 +73,21 @@ export const TextWrapper = styled.span`
   margin-top: ${({ mt }) => (mt ? mt : "")};
 `;
 export const Section = styled.section`
-  padding: ${({ padding }) => (padding ? padding : "140px 0")};
+  padding: ${({ padding }) => (padding ? padding : "0 15%")};
   margin: ${({ margin }) => (margin ? margin : "")};
   background: ${({ inverse }) => (inverse ? "white" : "#071c2f")};
   position: ${({ position }) => (position ? position : "")};
   width: ${({ width }) => (width ? width : "auto")};
   min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};
   max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "auto")};
-  height: ${({ height }) => (height ? height : "auto")};
-  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "auto")};
+  height: ${({ height }) => (height ? height : "")};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "")};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
+  display:flex;
+  align-items: center;
+  /*border: solid red 5px;*/
   @media screen and (max-width: 768px) {
-    padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
+   
   }
 `;
 
@@ -107,7 +108,7 @@ export const Row = styled.div`
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
   flex-wrap: ${({ wrap }) => (wrap ? wrap : "")};
   @media screen and (max-width: 768px) {
-    display: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
+    display: ${({ smPadding }) => (smPadding ? smPadding : "0 0")};
   }
   @media screen and (max-width: 1024px) {
     flex-direction: ${({ direction }) => (direction ? direction : "row")};

@@ -43,7 +43,7 @@ export const Projects = ({
   
 
   return (
-    <Section inverse={inverse} ref={ref}>
+    <Section id="projects" inverse={inverse} ref={ref}>
       <Container>
         <ContentRow reverse={reverse}>
           <ContentColumn>
@@ -92,7 +92,7 @@ export const Projects = ({
               <Img
                 src={img}
                 alt={alt}
-                whileHover={{ rotate: 2, scale: 1.02 }}
+                whileHover={{ rotate: 0, scale:  1}}
                 transition={{ duration: 0.5 }}
               />
             </ImgWrapper>

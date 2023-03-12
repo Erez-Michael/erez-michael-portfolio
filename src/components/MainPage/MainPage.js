@@ -1,14 +1,18 @@
 import React from 'react';
 import { Wrapper } from './MainPageStyles';
 import { heroOne, heroTwo, heroThree } from "../../data/HeroData";
-import { Content } from "../../components/Content/Content";
+import { Projects } from "../Projects/Projects";
+import About from "../About/About";
+import Skills from "../Skills/Skills";
 
 const MainPage = () => {
   return (
     <Wrapper>
-      <Content {...heroOne} />
-      <Content {...heroTwo} />
-      <Content {...heroThree} />
+      <About />
+      <Projects {...heroOne} />
+      <Projects {...heroTwo} />
+      <Projects {...heroThree} />
+      <Skills />
     </Wrapper>
   );
 }
