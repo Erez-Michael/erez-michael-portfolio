@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { motion } from "framer-motion";
+
 
 const GlobalStyles = createGlobalStyle`
 
@@ -132,15 +134,60 @@ export const Column = styled.div`
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
 `;
 
-export const Button = styled.button`
+export const ContentButton = styled(motion.button)`
+margin-top: px;
+  height: 3rem;
+  padding: 16px 32px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 18px;
+  letter-spacing: 1.54px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  color: ${({ inverse }) => (inverse ? "#0c4577" : "white")};
   border-radius: 4px;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: 2px solid ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    background: ${({ inverse }) => (inverse ? "#0c4577" : "white")};
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:hover:before {
+    height: 500%;
+  }
+  &:hover {
+    color: ${({ inverse }) => (inverse ? "white" : "black")};
+  }
+`;
+
+export const Button = styled.button`
+position: relative;
+top:3%;
+left: 95%;
+border-radius: 4px;
   background: none;
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
   outline: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   cursor: pointer;
   overflow: hidden;
   position: relative;
