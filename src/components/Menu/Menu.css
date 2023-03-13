@@ -52,9 +52,12 @@
     height: 0;
     perspective: 100vmin;
 }
+
+/* // PERSPECTIVE CONTROL // */
+
 @media screen and (max-height:768px) {
 .cube-wrap{
-    --size:35vmin;
+    --size:40vmin;
 }
 }
 
