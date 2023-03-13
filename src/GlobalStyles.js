@@ -179,7 +179,6 @@ margin-top: px;
 export const Button = styled.button`
 position: relative;
 top:3%;
-left: 95%;
 border-radius: 4px;
   background: none;
   white-space: nowrap;
@@ -209,6 +208,10 @@ border-radius: 4px;
   }
   &:hover {
     color: black;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 

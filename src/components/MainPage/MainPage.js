@@ -6,6 +6,9 @@ import About from "../About/About";
 import Skills from "../Skills/Skills";
 
 const MainPage = () => {
+
+
+
   return (
     <Wrapper>
       <About />

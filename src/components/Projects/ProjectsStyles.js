@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContentRow = styled.div`
- /* border: solid blue 5px;*/
+ /*border: solid blue 5px;*/
 background-color:#485461;
   display: flex;
   flex-wrap: wrap;
@@ -15,27 +15,34 @@ background-color:#485461;
 `;
 
 export const ContentColumn = styled(motion.div)`
- /* border: solid black 5px;*/
-background-color:#485461;
+  background-color: #485461;
 
- padding:10px;
+  padding: 10px;
   flex: 1;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
+align-items: flex-start;
+
+  @media screen and (max-width: 1536px) {
     max-width: 100% !important;
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
-  
   }
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
   padding-top: 0;
   background-color: #485461;
+  display: flex;
+flex-direction  : column;
+justify-content: flex-start;
+
+  @media screen and (max-width: 1536px) {
+ position: relative;
+ top : 0;
+  }
 
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
@@ -60,6 +67,8 @@ export const ImgWrapper = styled(motion.div)`
   justify-content: center;
   position: relative;
   z-index: -1;
+  /*box-shadow: 0px 8px 25px #eee;*/
+  border-radius: 4px;
 `;
 
 
@@ -72,11 +81,12 @@ export const TopLine = styled(motion.div)`
   margin-bottom: 1.3rem;
   color: #febe10;
   background-color: #485461;
-`;
+  `;
 
 export const Img = styled(motion.img)`
   padding-right: 0;
-  border: 0;
+ 
+  border-radius: 4px;
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;

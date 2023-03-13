@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Wrapper = styled.div`
   padding: 0 15%;
   height:fit-content;
@@ -91,8 +92,11 @@ export const Body = styled.div`
   letter-spacing: 2px;
   line-height: 2rem;
   span {
-    text-decoration: underline;
-    background: #485461;
+    background: transparent;
+    border-radius: 3px;
+    padding: 2px 5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 50px -30px #a8a8a8;
+    box-shadow: 0px 10px 13px -7px #000000, 0px 0px 50px -30px #a8a8a8;
   }
   @media screen and (max-width: 768px) {
     letter-spacing: 1.2px;
@@ -109,3 +113,9 @@ export const Tools = styled.div`
     font-weight: 600;
   }
 `;
+
+export const ButtonStyle = styled.div`
+ 
+  
+`;
+

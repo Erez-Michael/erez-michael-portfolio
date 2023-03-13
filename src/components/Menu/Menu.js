@@ -3,6 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll-v2";
 import "./Menu.css";
 
 import { Wrapper } from "../Menu/MenuStyles";
+import Fader from "../Navbar/Fader";
 
 const Menu = () => {
 
@@ -18,20 +19,33 @@ const Menu = () => {
     false
   );
 
+  const style = {
+    
+    ".active": {
+      backgroundColor: "#485461",
+      border: "solid black 1px",
+      width:"100%"
+    },
+  };
+ 
+
   return (
     <Wrapper>
       <div class="cube-wrap">
         <div class="cube">
           <div class="side front">
+            <h4>
+            <Fader />
+            </h4>
             <p class="about">
-              <AnchorLink href="#about">
+              <AnchorLink style={style} href="#about">
                 <button class="about-button">About</button>
               </AnchorLink>
             </p>
           </div>
           <div class="side middle">
             <p class="projects">
-              <AnchorLink href="#projects">
+              <AnchorLink offset={() => 50} href="#projects">
                 <button class="projects-button">Projects</button>
               </AnchorLink>
             </p>
