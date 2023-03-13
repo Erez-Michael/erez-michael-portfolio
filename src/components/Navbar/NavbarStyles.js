@@ -17,12 +17,6 @@ export const StyledNavbar = styled.div`
   width: 100%;
 `;
 
-export const Blink = styled.div`
-color: black;
-z-index: 10;
-
-`;
-
 export const Logo = styled.div`
   /*border: yellowgreen solid 2px;*/
   position: fixed;
@@ -92,19 +86,27 @@ export const Links = styled.div`
   justify-content: space-between;
   height: 180px;
   div {
-    /* background: transparent;
-    backdrop-filter: blur(25px);*/
+   
     height: 35px;
     width: 35px;
     position: relative;
-    top: 380%;
+    top: 75vh;
     right: 50%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* // Float & twisted animation // 
+    @media screen and (max-height: 768px) {
+      top: 70vh;
+      transform: scale(0.8);
+    }
+    @media screen and (max-height: 650px) {
+      top: 65vh;
+      transform: scale(0.75);
+    }
+  }
+  /* // Float & twisted animation // 
 
     transform: rotateX(-31deg) rotateZ(0deg);
     transform-style: preserve-3d;
@@ -118,7 +120,6 @@ export const Links = styled.div`
       box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         54px 54px 28px -10px rgba(34, 33, 81, 0.15);
     }*/
-  }
   /** ////// SHAKE ANIMATION ////////// */
 
   div:hover {
@@ -126,7 +127,6 @@ export const Links = styled.div`
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
-   
   }
   @keyframes shake {
     10%,
