@@ -71,17 +71,17 @@ export const Projects = ({
               >
                 {description}
               </Subtitle>
-             {/*<ContentButton
+              <ContentButton
+                className="glow-on-hover"
                 initial={initial}
-                </TextWrapper>
                 transition={{ delay: 1, duration: 0.6 }}
                 animate={animation}
                 inverse={inverse}
                 primary={primary}
               >
                 {buttonLabel}
-              </ContentButton>*/}
-          </TextWrapper>
+              </ContentButton>
+            </TextWrapper>
           </ContentColumn>
           <ContentColumn
             initial={initial}
@@ -92,7 +92,7 @@ export const Projects = ({
               <Img
                 src={img}
                 alt={alt}
-                whileHover={{ rotate: 0, scale:  1}}
+                whileHover={{ rotate: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
               />
             </ImgWrapper>

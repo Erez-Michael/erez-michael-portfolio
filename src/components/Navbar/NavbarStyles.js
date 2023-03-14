@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 
 export const StyledNavbar = styled.div`
   width: 100%;
+  height: fit-content;
 `;
 
 export const Logo = styled.div`
@@ -40,9 +41,54 @@ export const Logo = styled.div`
     cursor: pointer;
     color: #364853;
   }
+
   div h2:nth-child(2) {
     cursor: pointer;
     color: #febe10;
+    transform: translate(0, -81px);
+    animation: animate 2s ease-in-out infinite;
+  }
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  /* ////// HOVER /////////////////////// */
+
+  div:hover h2:nth-child(1) {
+    cursor: pointer;
+    color: #febe10;
+  }
+
+  div:hover h2:nth-child(2) {
+    cursor: pointer;
+    color: #364853;
     transform: translate(0, -81px);
     animation: animate 2s ease-in-out infinite;
   }

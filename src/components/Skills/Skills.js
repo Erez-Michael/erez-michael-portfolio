@@ -1,8 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Wrapper } from "./SkillsStyles";
 import Tools from "../../data/Tools";
+import Timer from "./Timer"
+
+
 
 const Skills = () => {
+  const [loading, setLoading] = useState(false);
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -30,8 +34,8 @@ const Skills = () => {
     const w = boundingBox.width;
     const h = boundingBox.height;
 
-    const nw = Math.floor(Math.random() * (w - 100)) + minX;
-    const nh = Math.floor(Math.random() * (h - 100)) + minY;
+    const nw = Math.floor(Math.random() * (w - 50)) + minX;
+    const nh = Math.floor(Math.random() * (h - 50)) + minY;
 
     return [nh, nw];
   };
@@ -49,7 +53,7 @@ const Skills = () => {
   };
 
   return (
-    <Wrapper id="skills" style={{ fontSize: "3rem" }} ref={wrapperRef}>
+    <Wrapper id="skills" ref={wrapperRef}>
           <Tools/>
     </Wrapper>
   );

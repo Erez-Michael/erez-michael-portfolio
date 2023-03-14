@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  div.a {
+  
+div.a {
     position: fixed;
     transition: all 5s ease-in-out;
     border-radius: 50%;

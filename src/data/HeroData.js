@@ -6,7 +6,8 @@ export const heroOne = {
   },
   headline: "Ludmer Engineering",
   description: "Static website for a Montreal based engineering firm",
-  linkTo: "/about",
+  buttonLabel: "View Projects",
+  linkTo: "",
   imgStart: "start",
   img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678550808/ludmer_vm05bq.png",
   start: "true",
@@ -22,7 +23,7 @@ export const heroTwo = {
   description: "Concordia Bootcamp final project: Full-Stack MERN application",
   buttonLabel: "View Projects",
 
-  linkTo: "/projects",
+  linkTo: "",
   imgStart: "start",
   img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678550810/RQ2_z2sxmr.png",
   start: "true",
