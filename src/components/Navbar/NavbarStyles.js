@@ -39,13 +39,11 @@ export const Logo = styled.div`
   div h2:nth-child(1) {
     cursor: pointer;
     color: #364853;
-    -webkit-text-stroke: 1px #364853;
   }
   div h2:nth-child(2) {
     cursor: pointer;
-
     color: #febe10;
-    transform: translate(0px, -80px);
+    transform: translate(0, -81px);
     animation: animate 2s ease-in-out infinite;
   }
   @keyframes animate {

@@ -1,84 +1,83 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  border: solid orange 4px;
-
   div.a {
-    width: 50px;
-    height: 50px;
-    background-color: red;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
 
   div.b {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.c {
-    width: 50px;
-    height: 50px;
-    background-color: green;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.d {
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.e {
-    width: 50px;
-    height: 50px;
-    background-color: red;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.f {
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.g {
-    width: 50px;
-    height: 50px;
-    background-color: black;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.h {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.i {
-    width: 50px;
-    height: 50px;
-    background-color: red;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.j {
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
   }
   div.k {
-    width: 50px;
-    height: 50px;
-    background-color: orange;
     position: fixed;
+    transition: all 5s ease-in-out;
     border-radius: 50%;
+    height: 0%;
+  }
+  div.l {
+    position: fixed;
+    transition: all 5s ease-in-out;
+    border-radius: 50%;
+    height: 0%;
+  }
+  div.m {
+    position: fixed;
+    transition: all 5s ease-in-out;
+    border-radius: 50%;
+    height: 0%;
   }
 `;

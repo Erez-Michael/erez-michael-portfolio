@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
 import "./Menu.css";
 
-import { Wrapper } from "../Menu/MenuStyles";
+import { Wrapper, StyledMenuButton } from "../Menu/MenuStyles";
 import Fader from "../Navbar/Fader";
 
 const Menu = () => {
+  const [currentPage, setCurrentPage] = useState("about");
 
   window.addEventListener(
     "scroll",
     () => {
+    const hash = window.location.hash.substr(1);
+    setCurrentPage(hash);
+
       document.body.style.setProperty(
         "--scroll",
         window.pageYOffset /
@@ -19,41 +23,75 @@ const Menu = () => {
     false
   );
 
-  const style = {
-    
-    ".active": {
-      backgroundColor: "#485461",
-      border: "solid black 1px",
-      width:"100%"
-    },
+  const MenuButton = ({ className, linkTo, children, borderStyle }) => {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+      setActive(linkTo === currentPage);
+      console.log(linkTo, currentPage);
+    }, [currentPage]);
+
+    const handleClick = () => {
+      setCurrentPage(linkTo);
+    };
+
+
+    return (
+      <StyledMenuButton
+        onClick={handleClick}
+        active={active}
+        borderStyle={borderStyle}
+        className={className}
+      >
+        {children}
+      </StyledMenuButton>
+    );
   };
- 
+
 
   return (
     <Wrapper>
-      <div class="cube-wrap">
-        <div class="cube">
-          <div class="side front">
+      <div className="cube-wrap">
+        <div className="cube">
+          <div className="side front">
             <h4>
-            <Fader />
+              <Fader />
             </h4>
-            <p class="about">
-              <AnchorLink style={style} href="#about">
-                <button class="about-button">About</button>
+            <p className="about">
+              <AnchorLink href="#about">
+                <MenuButton
+                  borderStyle="solid #eee 4px"
+                  linkTo="about"
+                  className="about-button"
+                >
+                  About
+                </MenuButton>
               </AnchorLink>
             </p>
           </div>
-          <div class="side middle">
-            <p class="projects">
+          <div className="side middle">
+            <p className="projects">
               <AnchorLink offset={() => 50} href="#projects">
-                <button class="projects-button">Projects</button>
+                <MenuButton
+                  borderStyle="solid #FEBE10 4px"
+                  linkTo="projects"
+                  className="projects-button"
+                >
+                  Projects
+                </MenuButton>
               </AnchorLink>
             </p>
           </div>
-          <div class="side back">
-            <p class="skills">
+          <div className="side back">
+            <p className="skills">
               <AnchorLink href="#skills">
-                <button class="skills-button">My Skills</button>
+                <MenuButton
+                  borderStyle="solid #eee 4px"
+                  linkTo="skills"
+                  className="skills-button"
+                >
+                  My Skills
+                </MenuButton>
               </AnchorLink>
             </p>
           </div>

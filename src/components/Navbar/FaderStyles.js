@@ -44,5 +44,5 @@ transform: scale(1.5);
   background: transparent;
   color: gray;
   margin-top:13px;
-  margin-left: 9px;
+  margin-left: 15px;
 `;

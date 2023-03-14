@@ -7,7 +7,7 @@ const MarqueeTools = () => {
 
   return (
     <>
-      <Wrapper>
+      {/*} <Wrapper>
         <Marquee
           direction="left"
           speed={60}
@@ -29,6 +29,7 @@ const MarqueeTools = () => {
           ))}
         </Marquee>
       </Wrapper>
+          */}
     </>
   );
 };

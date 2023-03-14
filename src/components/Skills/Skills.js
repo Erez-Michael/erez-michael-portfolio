@@ -1,56 +1,58 @@
-import React from 'react'
-import { Wrapper } from './SkillsStyles';
-import $ from "jquery"
+import React, { useEffect, useRef } from "react";
+import { Wrapper } from "./SkillsStyles";
+import Tools from "../../data/Tools";
 
 const Skills = () => {
-  $(document).ready(function () {
-    animateDiv(".a");
-    animateDiv(".b");
-    animateDiv(".c");
-    animateDiv(".d");
-    animateDiv(".e");
-    animateDiv(".f");
-    animateDiv(".g");
-    animateDiv(".h");
-    animateDiv(".i");
-    animateDiv(".j");
-    animateDiv(".k");
-  });
+  const wrapperRef = useRef(null);
 
-  const makeNewPosition=()=> {
-    // Get viewport dimensions (remove the dimension of the div)
-    const h = $(window).height() - 50;
-    const w = $(window).width() - 50;
+  useEffect(() => {
+    animateDiv("#a");
+    animateDiv("#b");
+    animateDiv("#c");
+    animateDiv("#d");
+    animateDiv("#e");
+    animateDiv("#f");
+    animateDiv("#g");
+    animateDiv("#h");
+    animateDiv("#i");
+    animateDiv("#j");
+    animateDiv("#k");
+    animateDiv("#l");
+    animateDiv("#m");
+  }, []);
 
-    const nh = Math.floor(Math.random() * h);
-    const nw = Math.floor(Math.random() * w);
+  const makeNewPosition = () => {
+    const wrapperElement = wrapperRef.current;
+    const boundingBox = wrapperElement.getBoundingClientRect();
+    const minX = boundingBox.x;
+    const minY = boundingBox.y;
+
+    const w = boundingBox.width;
+    const h = boundingBox.height;
+
+    const nw = Math.floor(Math.random() * (w - 100)) + minX;
+    const nh = Math.floor(Math.random() * (h - 100)) + minY;
 
     return [nh, nw];
-  }
+  };
 
-  const animateDiv=(myclass)=>{
+  const animateDiv = (myclass) => {
     const newq = makeNewPosition();
-    $(myclass).animate({ top: newq[0], left: newq[1] }, 5000, function () {
+    const element = document.querySelector(myclass);
+
+    element.style.top = `${newq[0]}px`;
+    element.style.left = `${newq[1]}px`;
+
+    setTimeout(() => {
       animateDiv(myclass);
-    });
-  }
-  
+    }, 5000);
+  };
 
   return (
-    <Wrapper id="skills" style={{ fontSize: "3rem" }}>
-      {/*}  <div class="a"></div>
-      <div class="b"></div>
-      <div class="c"></div>
-      <div class="d"></div>
-      <div class="e"></div>
-      <div class="f"></div>
-      <div class="g"></div>
-      <div class="h"></div>
-      <div class="i"></div>
-      <div class="j"></div>
-  <div class="k"></div>*/}
+    <Wrapper id="skills" style={{ fontSize: "3rem" }} ref={wrapperRef}>
+          <Tools/>
     </Wrapper>
   );
-}
+};
 
 export default Skills;
