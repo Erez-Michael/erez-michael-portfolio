@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContentRow = styled.div`
- /*border: solid blue 5px;*/
-background-color:#485461;
+  /*border: solid blue 5px;*/
+  background-color: #485461;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding:50px 0;
+  padding: 50px 0;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
@@ -16,14 +16,12 @@ background-color:#485461;
 
 export const ContentColumn = styled(motion.div)`
   background-color: #485461;
-
   padding: 10px;
   flex: 1;
   z-index: 10;
   display: flex;
   flex-direction: column;
-align-items: flex-start;
-
+  align-items: flex-start;
   @media screen and (max-width: 1536px) {
     max-width: 100% !important;
     flex-basis: 100%;
@@ -36,14 +34,12 @@ export const TextWrapper = styled.div`
   padding-top: 0;
   background-color: #485461;
   display: flex;
-flex-direction  : column;
-justify-content: flex-start;
-
+  flex-direction: column;
+  justify-content: flex-start;
   @media screen and (max-width: 1536px) {
- position: relative;
- top : 0;
+    position: relative;
+    top: 0;
   }
-
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
     > h1,
@@ -71,8 +67,6 @@ export const ImgWrapper = styled(motion.div)`
   border-radius: 4px;
 `;
 
-
-
 export const TopLine = styled(motion.div)`
   font-size: 0.9rem;
   line-height: 16px;
@@ -81,11 +75,11 @@ export const TopLine = styled(motion.div)`
   margin-bottom: 1.3rem;
   color: #febe10;
   background-color: #485461;
-  `;
+`;
 
 export const Img = styled(motion.img)`
   padding-right: 0;
- 
+
   border-radius: 4px;
   max-width: 100%;
   vertical-align: middle;
@@ -94,7 +88,6 @@ export const Img = styled(motion.img)`
   max-height: 700px;
   z-index: 1;
 `;
-
 
 export const Heading = styled(motion.h2)`
   background-color: #485461;
@@ -113,7 +106,6 @@ export const Subtitle = styled(motion.p)`
   margin-bottom: 35px;
   line-height: 24px;
   background-color: #485461;
-
   color: ${({ inverse }) => (inverse ? "#fffbe6" : "white")};
 `;
 
@@ -139,7 +131,7 @@ export const ContentButton = styled(motion.button)`
   position: relative;
   overflow: hidden;
   &:before {
-    background: ${({ inverse }) => (inverse ? "#FEBE10" :" #FEBE10")};
+    background: ${({ inverse }) => (inverse ? "#FEBE10" : " #FEBE10")};
     content: "";
     position: absolute;
     top: 50%;
@@ -158,4 +150,3 @@ export const ContentButton = styled(motion.button)`
     color: ${({ inverse }) => (inverse ? "#eee" : "#eee")};
   }
 `;
-

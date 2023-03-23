@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Wrapper } from "./SkillsStyles";
-import Tools from "../../data/Tools";
-import Timer from "./Timer"
+import React, { useEffect, useRef } from "react";
+import { Wrapper} from "./SkillsStyles";
+import Tools from "../../data/ToolsData";
 
 
 
 const Skills = () => {
-  const [loading, setLoading] = useState(false);
   const wrapperRef = useRef(null);
+
 
   useEffect(() => {
     animateDiv("#a");
@@ -23,7 +22,7 @@ const Skills = () => {
     animateDiv("#k");
     animateDiv("#l");
     animateDiv("#m");
-  }, []);
+  }, );
 
   const makeNewPosition = () => {
     const wrapperElement = wrapperRef.current;
@@ -49,12 +48,14 @@ const Skills = () => {
 
     setTimeout(() => {
       animateDiv(myclass);
-    }, 5000);
+    },5000);
   };
+
+
 
   return (
     <Wrapper id="skills" ref={wrapperRef}>
-          <Tools/>
+     <Tools/>
     </Wrapper>
   );
 };

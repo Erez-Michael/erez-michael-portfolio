@@ -10,7 +10,7 @@ import {
   ImgWrapper,
   Img,
   ContentColumn,
-} from "./ProjectsStyles.js";
+} from "./ProjectStyles";
 
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
@@ -39,8 +39,6 @@ export const Projects = ({
       });
     }
   }, [inView, animation]);
-
-  
 
   return (
     <Section id="projects" inverse={inverse} ref={ref}>

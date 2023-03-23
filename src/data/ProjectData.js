@@ -1,3 +1,4 @@
+
 export const heroOne = {
   reverse: true,
   inverse: true,
@@ -45,5 +46,3 @@ export const heroThree = {
   img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1678222645/Gogo_w4ahah.png",
   start: "true",
 };
-
-

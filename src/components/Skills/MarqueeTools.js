@@ -1,22 +1,21 @@
 import Marquee from "react-fast-marquee";
 import styled from "styled-components";
-import { tools } from "../../data/Tools";
+import { tools } from "../../data/MarqueeData";
 
 const MarqueeTools = () => {
   
 
   return (
     <>
-      {/*} <Wrapper>
+      <Wrapper>
         <Marquee
           direction="left"
-          speed={60}
+          speed={50}
           loop={0}
           play={true}
-          pauseOnHover={true}
           gradient={true}
           gradientColor={[245, 245, 245]}
-          gradientWidth={50}
+          gradientWidth={200}
           style={{
             overflow: "hidden",
           }}
@@ -24,18 +23,17 @@ const MarqueeTools = () => {
           {tools.map((e, index) => (
             <div>
             <img src={e.img} key={index} />
-              <p key={index}>{e.text}</p>
             </div>
           ))}
         </Marquee>
       </Wrapper>
-          */}
+          
     </>
   );
 };
 
 const Wrapper = styled.div`
-  background-color: #f5f5f5;
+  background-color: #485461;
   text-align: center;
   margin-top: 500px;
   h3 {
@@ -55,3 +53,6 @@ const Wrapper = styled.div`
 `;
 
 export default MarqueeTools;
+
+
+  

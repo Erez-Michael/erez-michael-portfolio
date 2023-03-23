@@ -75,7 +75,7 @@ export const TextWrapper = styled.span`
   margin-top: ${({ mt }) => (mt ? mt : "")};
 `;
 export const Section = styled.section`
-  padding: ${({ padding }) => (padding ? padding : "0 15%")};
+  padding: ${({ padding }) => (padding ? padding : "0 10%")};
   margin: ${({ margin }) => (margin ? margin : "")};
   background: ${({ inverse }) => (inverse ? "white" : "#071c2f")};
   position: ${({ position }) => (position ? position : "")};
@@ -85,11 +85,11 @@ export const Section = styled.section`
   height: ${({ height }) => (height ? height : "")};
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "")};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
-  display:flex;
+  display: flex;
   align-items: center;
   /*border: solid red 5px;*/
+  background-color: #485461;
   @media screen and (max-width: 768px) {
-   
   }
 `;
 

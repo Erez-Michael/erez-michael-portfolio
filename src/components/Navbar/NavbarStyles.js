@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 35%;
   left: 0;
+  
 
   @media screen and (max-width: 768px) {
     position: relative;
@@ -29,6 +30,9 @@ export const Logo = styled.div`
   align-items: center;
   padding-left: 20px;
   font-size: 3rem;
+
+  
+
   @media screen and (max-width: 768px) {
     position: relative;
     left: 0;
@@ -129,8 +133,9 @@ export const Links = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 180px;
-  div {
-   
+  
+  a {
+    text-decoration: none;
     height: 35px;
     width: 35px;
     position: relative;
@@ -140,6 +145,8 @@ export const Links = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 
     @media screen and (max-height: 768px) {
       top: 70vh;
@@ -166,7 +173,7 @@ export const Links = styled.div`
     }*/
   /** ////// SHAKE ANIMATION ////////// */
 
-  div:hover {
+  a:hover {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -195,6 +202,8 @@ export const Links = styled.div`
     }
   }
 `;
+
+
 
 export const NavButton = styled.div`
   /*border: yellowgreen solid 2px;*/

@@ -56,8 +56,13 @@ const Navbar = () => {
           </Logo>
         </StyledNavbar>
         <Links>
-          <div style={CvStyle}>CV</div>
-          <div>
+          <a
+            href="https://drive.google.com/file/d/1p9rpGfpQyOcMBg3hZ7pAyP01NFLcUZtZ/view?usp=sharing"
+            style={CvStyle}
+          >
+            CV
+          </a>
+          <a href="https://www.linkedin.com/in/erezmichael/">
             <BsLinkedin
               size={16}
               style={{
@@ -71,10 +76,10 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             />
-          </div>
-          <div>
+          </a>
+          <a href="mailto: erezmichael01@gmail.com">
             <BsFillEnvelopeFill size={32} style={IconStyle} />
-          </div>
+          </a>
         </Links>
         <NavButton>&#8801;</NavButton>
       </Wrapper>

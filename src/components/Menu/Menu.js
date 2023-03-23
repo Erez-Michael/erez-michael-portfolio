@@ -28,7 +28,6 @@ const Menu = () => {
 
     useEffect(() => {
       setActive(linkTo === currentPage);
-      console.log(linkTo, currentPage);
     }, [currentPage]);
 
     const handleClick = () => {

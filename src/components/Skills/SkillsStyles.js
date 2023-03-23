@@ -82,3 +82,7 @@ div.a {
     height: 0%;
   }
 `;
+
+export const Toggle = styled.button`
+  
+`;

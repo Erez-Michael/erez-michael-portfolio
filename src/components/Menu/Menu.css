@@ -1,4 +1,5 @@
 /* /////////////////// Smooth Scroll /////////////////////////// */
+
 #about {
     margin-top: 0;
      /*border: 2px solid red;*/
@@ -118,7 +119,7 @@
     left: calc(var(--size) * -.5);
     transform: rotate(270deg);
     border: solid grey 1px;
-    border-radius: 3%;
+    border-radius: 1em;
 }
 
 

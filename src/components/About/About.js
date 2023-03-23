@@ -1,5 +1,4 @@
 import React from "react";
-import MarqueeTools from "../Home/MarqueeTools";
 import {
   Wrapper,
   Title,
