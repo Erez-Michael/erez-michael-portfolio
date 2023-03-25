@@ -3,6 +3,8 @@ import { Container, Section } from "../../../GlobalStyles";
 import "../../Buttons/QuoteButton.css";
 import { BsGithub } from "react-icons/bs";
 import {
+  Title,
+  Wrapper,
   ContentRow,
   TextWrapper,
   TopLine,
@@ -50,9 +52,11 @@ export const ProjectOne = ({
     fontSize: "2rem",
   };
 
-
   return (
     <Section id="projects" inverse={inverse} ref={ref}>
+      <Wrapper>
+
+      <Title>Projects</Title>
       <Container>
         <ContentRow reverse={reverse}>
           <ContentColumn>
@@ -61,7 +65,7 @@ export const ProjectOne = ({
                 initial={initial}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 animate={animation}
-              >
+                >
                 {topLine.text}
               </TopLine>
               <Heading
@@ -69,7 +73,7 @@ export const ProjectOne = ({
                 transition={{ delay: 0.5, duration: 0.6 }}
                 animate={animation}
                 inverse={inverse}
-              >
+                >
                 {headline}
               </Heading>
               <Subtitle
@@ -77,7 +81,7 @@ export const ProjectOne = ({
                 transition={{ delay: 0.7, duration: 0.6 }}
                 animate={animation}
                 inverse={inverse}
-              >
+                >
                 {description}
               </Subtitle>
               <Buttons>
@@ -88,7 +92,7 @@ export const ProjectOne = ({
                   animate={animation}
                   inverse={inverse}
                   primary={primary}
-                >
+                  >
                   <a href="https://www.ludmer-engineering.ca/">{buttonLabel}</a>
                 </ContentButton>
 
@@ -102,18 +106,19 @@ export const ProjectOne = ({
             initial={initial}
             transition={{ delay: 0.5, duration: 0.6 }}
             animate={animation}
-          >
+            >
             <ImgWrapper>
               <Img
                 src={img}
                 alt={alt}
                 whileHover={{ rotate: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
-              />
+                />
             </ImgWrapper>
           </ContentColumn>
         </ContentRow>
       </Container>
+                </Wrapper>
     </Section>
   );
 };

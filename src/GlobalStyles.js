@@ -14,10 +14,10 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  /*border: solid yellowgreen 5px;*/
+  border-top: solid #febe10 0.1rem;
   width: 100%;
   @media screen and (max-width: 768px) {
-
+    border:none;
   }
 `;
 export const MainHeading = styled.h1`
@@ -87,7 +87,7 @@ export const Section = styled.section`
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
   display: flex;
   align-items: center;
-  /*border: solid red 5px;*/
+ 
   background-color: #485461;
   @media screen and (max-width: 768px) {
   }

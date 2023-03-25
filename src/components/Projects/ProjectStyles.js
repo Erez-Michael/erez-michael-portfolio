@@ -1,6 +1,25 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+export const Wrapper = styled.div``;
+export const Title = styled.div`
+  background-color: #485461;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-shadow: rgb(254, 190, 16) 1px 0px 0px,
+    rgb(254, 190, 16) 0.540302px 0.841471px 0px,
+    rgb(254, 190, 16) -0.416147px 0.909297px 0px,
+    rgb(254, 190, 16) -0.989992px 0.14112px 0px,
+    rgb(254, 190, 16) -0.653644px -0.756802px 0px,
+    rgb(254, 190, 16) 0.283662px -0.958924px 0px,
+    rgb(254, 190, 16) 0.96017px -0.279415px 0px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+  }
+`;
+
 export const ContentRow = styled.div`
   background-color: #485461;
   display: flex;
@@ -120,6 +139,7 @@ justify-content:space-around;
 `;
 
 export const GitIcon = styled.div`
+
   background-color: #485461;
   cursor: pointer;
 
