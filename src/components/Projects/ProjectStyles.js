@@ -139,9 +139,10 @@ justify-content:space-around;
 `;
 
 export const GitIcon = styled.div`
-
   background-color: #485461;
-  cursor: pointer;
+  a {
+    background-color: #485461;
+  }
 
   &:hover {
     transform: scale(1.3) rotate(360deg);

@@ -10,6 +10,30 @@ export const Wrapper = styled.div`
   }
   `;
 
+export const TopRow = styled.div`
+  background-color: #485461;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  `;
+
+export const GitIcon = styled.div`
+  padding-top: 0.25rem;
+  padding-right: 1rem;
+  display: flex;
+  background-color: #485461;
+  a {
+    background-color: #485461;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+  }
+  @media screen and (max-width: 768px) {
+  }
+`;
+
 export const Container = styled.div`
   margin-top: 35%;
   border-radius: 10px;

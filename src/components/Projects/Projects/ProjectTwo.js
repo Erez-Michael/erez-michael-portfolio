@@ -88,11 +88,13 @@ export const ProjectTwo = ({
                   inverse={inverse}
                   primary={primary}
                 >
-                  <a href="https://www.ludmer-engineering.ca/">{buttonLabel}</a>
+                  <a href="https://river-quiver.vercel.app/">{buttonLabel}</a>
                 </ContentButton>
 
                 <GitIcon>
-                  <BsGithub style={styles} />
+                  <a href="https://github.com/Erez-Michael/River-Quiver">
+                    <BsGithub style={styles} />
+                  </a>
                 </GitIcon>
               </Buttons>
             </TextWrapper>

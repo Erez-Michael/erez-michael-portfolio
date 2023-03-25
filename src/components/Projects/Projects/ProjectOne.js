@@ -55,70 +55,73 @@ export const ProjectOne = ({
   return (
     <Section id="projects" inverse={inverse} ref={ref}>
       <Wrapper>
-
-      <Title>Projects</Title>
-      <Container>
-        <ContentRow reverse={reverse}>
-          <ContentColumn>
-            <TextWrapper>
-              <TopLine
-                initial={initial}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                animate={animation}
-                >
-                {topLine.text}
-              </TopLine>
-              <Heading
-                initial={initial}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                animate={animation}
-                inverse={inverse}
-                >
-                {headline}
-              </Heading>
-              <Subtitle
-                initial={initial}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                animate={animation}
-                inverse={inverse}
-                >
-                {description}
-              </Subtitle>
-              <Buttons>
-                <ContentButton
-                  className="glow-on-hover"
+        <Title>Projects</Title>
+        <Container>
+          <ContentRow reverse={reverse}>
+            <ContentColumn>
+              <TextWrapper>
+                <TopLine
                   initial={initial}
-                  transition={{ delay: 1, duration: 0.6 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  animate={animation}
+                >
+                  {topLine.text}
+                </TopLine>
+                <Heading
+                  initial={initial}
+                  transition={{ delay: 0.5, duration: 0.6 }}
                   animate={animation}
                   inverse={inverse}
-                  primary={primary}
+                >
+                  {headline}
+                </Heading>
+                <Subtitle
+                  initial={initial}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                  animate={animation}
+                  inverse={inverse}
+                >
+                  {description}
+                </Subtitle>
+                <Buttons>
+                  <ContentButton
+                    className="glow-on-hover"
+                    initial={initial}
+                    transition={{ delay: 1, duration: 0.6 }}
+                    animate={animation}
+                    inverse={inverse}
+                    primary={primary}
                   >
-                  <a href="https://www.ludmer-engineering.ca/">{buttonLabel}</a>
-                </ContentButton>
+                    <a href="https://www.ludmer-engineering.ca/">
+                      {buttonLabel}
+                    </a>
+                  </ContentButton>
 
-                <GitIcon>
-                  <BsGithub style={styles} />
-                </GitIcon>
-              </Buttons>
-            </TextWrapper>
-          </ContentColumn>
-          <ContentColumn
-            initial={initial}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            animate={animation}
+                  <GitIcon>
+                    <a href="https://github.com/Erez-Michael/ludmer-engineering">
+                      <BsGithub style={styles} />
+                    </a>
+                  </GitIcon>
+                </Buttons>
+              </TextWrapper>
+            </ContentColumn>
+            <ContentColumn
+              initial={initial}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              animate={animation}
             >
-            <ImgWrapper>
-              <Img
-                src={img}
-                alt={alt}
-                whileHover={{ rotate: 0, scale: 1 }}
-                transition={{ duration: 0.5 }}
+              <ImgWrapper>
+                <Img
+                  src={img}
+                  alt={alt}
+                  whileHover={{ rotate: 0, scale: 1 }}
+                  transition={{ duration: 0.5 }}
                 />
-            </ImgWrapper>
-          </ContentColumn>
-        </ContentRow>
-      </Container>
-                </Wrapper>
+              </ImgWrapper>
+            </ContentColumn>
+          </ContentRow>
+        </Container>
+      </Wrapper>
     </Section>
   );
 };

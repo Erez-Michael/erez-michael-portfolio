@@ -80,21 +80,24 @@ export const ProjectThree = ({
                 {description}
               </Subtitle>
               <Buttons>
-
-              <ContentButton
-                className="glow-on-hover"
-                initial={initial}
-                transition={{ delay: 1, duration: 0.6 }}
-                animate={animation}
-                inverse={inverse}
-                primary={primary}
-              >
-                <a href="">{buttonLabel}</a>
-              </ContentButton>
-              <GitIcon>
-                <BsGithub style={styles} />
-              </GitIcon>
-                </Buttons>
+                <ContentButton
+                  className="glow-on-hover"
+                  initial={initial}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  animate={animation}
+                  inverse={inverse}
+                  primary={primary}
+                >
+                  <a href="https://gogo-gadgets-e-commerce.vercel.app/">
+                    {buttonLabel}
+                  </a>
+                </ContentButton>
+                <GitIcon>
+                  <a href="https://github.com/Erez-Michael/GoGoGadgets">
+                    <BsGithub style={styles} />
+                  </a>
+                </GitIcon>
+              </Buttons>
             </TextWrapper>
           </ContentColumn>
           <ContentColumn
