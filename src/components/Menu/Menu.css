@@ -125,7 +125,8 @@
 
 
 .front {
-    background-color: #FEBE10;
+    background-color: rgba(254, 190, 16,1)
+;
     transform: translateZ(calc(var(--size) * .5));
     transition: transform 1s linear;
     transform-origin: top left;
@@ -144,7 +145,7 @@
 
 
 .back {
-    background-color: #485461;
+    background-color: rgba(72, 84, 97, 0.85);
     transform: translateZ(calc(var(--size) * -.5));
     transition: transform 1s linear;
     transform-origin: top left;
@@ -154,7 +155,8 @@
 }
 
 .middle {
-    background-color: #eee;
+    background-color: rgba(238, 238, 238, 1)
+;
 }
 
 
@@ -183,7 +185,7 @@ button:before {
 }
 
 .about-button {
-    background-color: #FEBE10;
+    background-color: rgba(254, 190, 16,1);
     color: #485461;
     font-size: 2rem;
 }
@@ -197,7 +199,8 @@ button:before {
 
 
 .projects-button {
-    background-color: #eee;
+    background-color: rgba(238, 238, 238, 0.9) 
+;
     color: #485461;
     font-size: 1.75rem;
 }
@@ -209,7 +212,8 @@ button:before {
 }
 
 .skills-button {
-    background-color: #485461;
+    background-color: rgba(72, 84, 97, 0.85)
+;
     color: #FEBE10;
     font-size: 1.5rem;
 }
@@ -222,7 +226,7 @@ button:before {
 .skills-button:hover::before {
     border: solid black 1.5px;
     width: 100%;
-    background-color: whitesmoke;
+    background-color:black;
 }
 
 
@@ -248,8 +252,6 @@ button:before {
 
 .skills {
     color: #FEBE10;
-    background-color: #485461;
-
     transform: rotate(270deg);
     position: relative;
     left: 100px;

@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import Menu from "../Menu/Menu";
-import { BsLinkedin, BsFillEnvelopeFill,  } from "react-icons/bs";
+import { BsLinkedin, BsFillEnvelopeFill  } from "react-icons/bs";
 
 
 import {

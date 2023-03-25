@@ -1,21 +1,25 @@
 import React, { useEffect } from "react";
-import { Container, Section } from "../../GlobalStyles";
+import { Container, Section } from "../../../GlobalStyles";
+import { BsGithub } from "react-icons/bs";
+
 import {
   ContentRow,
   TextWrapper,
   TopLine,
   Heading,
+  Buttons,
+  GitIcon,
   ContentButton,
   Subtitle,
   ImgWrapper,
   Img,
   ContentColumn,
-} from "./ProjectStyles";
+} from "../ProjectStyles";
 
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
-export const Projects = ({
+export const ProjectTwo = ({
   primary,
   topLine,
   headline,
@@ -39,6 +43,12 @@ export const Projects = ({
       });
     }
   }, [inView, animation]);
+
+  const styles = {
+    backgroundColor: "#485461",
+    color: "#febe10",
+    fontSize: "2rem",
+  };
 
   return (
     <Section id="projects" inverse={inverse} ref={ref}>
@@ -69,16 +79,22 @@ export const Projects = ({
               >
                 {description}
               </Subtitle>
-              <ContentButton
-                className="glow-on-hover"
-                initial={initial}
-                transition={{ delay: 1, duration: 0.6 }}
-                animate={animation}
-                inverse={inverse}
-                primary={primary}
-              >
-                {buttonLabel}
-              </ContentButton>
+              <Buttons>
+                <ContentButton
+                  className="glow-on-hover"
+                  initial={initial}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  animate={animation}
+                  inverse={inverse}
+                  primary={primary}
+                >
+                  <a href="https://www.ludmer-engineering.ca/">{buttonLabel}</a>
+                </ContentButton>
+
+                <GitIcon>
+                  <BsGithub style={styles} />
+                </GitIcon>
+              </Buttons>
             </TextWrapper>
           </ContentColumn>
           <ContentColumn

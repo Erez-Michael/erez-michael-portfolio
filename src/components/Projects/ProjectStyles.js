@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContentRow = styled.div`
-  /*border: solid blue 5px;*/
   background-color: #485461;
   display: flex;
   flex-wrap: wrap;
@@ -25,12 +24,12 @@ export const ContentColumn = styled(motion.div)`
   @media screen and (max-width: 1536px) {
     max-width: 100% !important;
     flex-basis: 100%;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 
 export const TextWrapper = styled.div`
+width: 100%;
   padding-top: 0;
   background-color: #485461;
   display: flex;
@@ -109,6 +108,27 @@ export const Subtitle = styled(motion.p)`
   color: ${({ inverse }) => (inverse ? "#fffbe6" : "white")};
 `;
 
+export const Buttons = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #485461;
+  @media screen and (max-width: 768px) {
+justify-content:space-around;
+  }
+`;
+
+export const GitIcon = styled.div`
+  background-color: #485461;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3) rotate(360deg);
+    transition: 0.5s ease-in-out;
+  }
+`;
+
 export const ContentButton = styled(motion.button)`
   height: 3rem;
   width: fit-content;
@@ -119,34 +139,17 @@ export const ContentButton = styled(motion.button)`
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
-  background: none;
-  color: ${({ inverse }) => (inverse ? "#FEBE10" : "#FEBE10")};
-  border-radius: 4px;
-  white-space: nowrap;
-  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
-  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
-  outline: none;
-  border: 2px solid ${({ inverse }) => (inverse ? "#FEBE10" : "#FEBE10")};
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  &:before {
-    background: ${({ inverse }) => (inverse ? "#FEBE10" : " #FEBE10")};
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: all 0.6s ease-in-out;
-    width: 100%;
-    height: 0%;
-    transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #485461;
+  border: solid #febe10 1px;
+  border-radius: 2rem;
+
+  a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #febe10;
   }
-  &:hover:before {
-    height: 800%;
+  @media screen and (max-width: 768px) {
+    margin-right: 2rem;
   }
-  &:hover {
-    color: ${({ inverse }) => (inverse ? "#eee" : "#eee")};
-  }
+
 `;
