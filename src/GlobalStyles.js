@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const GlobalStyles = createGlobalStyle`
 
 *{
+  
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,8 +17,9 @@ const GlobalStyles = createGlobalStyle`
 export const Container = styled.div`
   border-top: solid #febe10 0.1rem;
   width: 100%;
+
   @media screen and (max-width: 768px) {
-    border:none;
+    border: none;
   }
 `;
 export const MainHeading = styled.h1`
@@ -75,7 +77,7 @@ export const TextWrapper = styled.span`
   margin-top: ${({ mt }) => (mt ? mt : "")};
 `;
 export const Section = styled.section`
-  padding: ${({ padding }) => (padding ? padding : "0 10%")};
+  padding: ${({ padding }) => (padding ? padding : "0 12%")};
   margin: ${({ margin }) => (margin ? margin : "")};
   background: ${({ inverse }) => (inverse ? "white" : "#071c2f")};
   position: ${({ position }) => (position ? position : "")};
