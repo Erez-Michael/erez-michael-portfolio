@@ -9,7 +9,7 @@ import {
   Container,
 } from "./AboutStyles";
 
-import {BsGithub} from "react-icons/bs"
+import { BsGithub } from "react-icons/bs";
 
 const styles = {
   backgroundColor: "#485461",
@@ -45,10 +45,7 @@ const About = () => {
           problem.
         </Body>
       </Container>
-      {/*<Tools>
-        <div>Tools</div>
-        <MarqueeTools />
-  </Tools>*/}
+     
     </Wrapper>
   );
 };

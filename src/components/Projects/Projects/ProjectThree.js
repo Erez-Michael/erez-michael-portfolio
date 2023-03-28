@@ -52,7 +52,7 @@ export const ProjectThree = ({
 
   return (
     <Section id="projects" inverse={inverse} ref={ref}>
-      <Container>
+      <Container style={{marginBottom:"150px"}}>
         <ContentRow reverse={reverse}>
           <ContentColumn>
             <TextWrapper>

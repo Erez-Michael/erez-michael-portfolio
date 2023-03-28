@@ -9,7 +9,7 @@ import {
 } from "./FeaturesStyles";
 import { featuresData } from "../../data/FeaturesData";
 
-const Features = ({img, name, description, imgClass}) => {
+const Features = () => {
   const initial = {
     y: 40,
     opacity: 0,

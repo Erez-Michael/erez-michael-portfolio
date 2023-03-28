@@ -11,8 +11,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     background-color: #fffbe6;
     font-family: 'Trispace', sans-serif;
-    }
-`;
+
+   
+  } 
+  `;
+  
 
 export const Container = styled.div`
   border-top: solid #febe10 0.1rem;

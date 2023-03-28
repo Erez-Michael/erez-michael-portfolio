@@ -31,6 +31,7 @@ export const FeatureColumn = styled(motion.div)`
   &:hover {
     transition: 0.5s ease-in-out;
     transform: scale(1.05) !important;
+  
   }
 `;
 
