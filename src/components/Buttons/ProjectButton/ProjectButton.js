@@ -3,9 +3,8 @@ import "./QuoteButton.css"
 
  const QuoteButton = () => {
     return (
-      <button class="glow-on-hover" type="button">
-        Quote
-      </button>
+      <button class="glow-on-hover" type="button"/>
+      
     );
 }
 

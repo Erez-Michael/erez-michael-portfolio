@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section } from "../../GlobalStyles";
+import { Container, Section } from "../../../GlobalStyles";
 import {
   FeatureText,
   FeatureWrapper,
@@ -7,7 +7,7 @@ import {
   FeatureImageWrapper,
   FeatureName,
 } from "./FeaturesStyles";
-import { featuresData } from "../../data/FeaturesData";
+import { featuresData } from "../../../data/FeaturesData";
 
 const Features = () => {
   const initial = {
@@ -36,8 +36,7 @@ const Features = () => {
               key={index}
             >
               <FeatureImageWrapper className={el.imgClass}>
-                <img style={style} src={el.img}>
-                </img>
+                <img style={style} src={el.img}></img>
               </FeatureImageWrapper>
               <FeatureName>{el.name}</FeatureName>
               <FeatureText>{el.description}</FeatureText>

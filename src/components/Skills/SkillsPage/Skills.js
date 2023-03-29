@@ -1,4 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
+import { ContentButton } from "../../Skills/SkillsPage/SkillsStyles";
+import { useAnimation } from "framer-motion";
+
 
 import {
   Wrapper,
@@ -6,24 +9,21 @@ import {
   Container,
   Header,
   Menu,
-  ButtonOne,
-  ButtonTwo,
-} from "./SkillsStyles";
-import Features from "./Features";
-import Tools from "../../data/ToolsData";
-import Timer from "./Timer";
-import Toggle from "../Buttons/Toggle/Toggle";
+} from "../SkillsPage/SkillsStyles";
+import Features from "../Features/Features";
+import Tools from "../../../data/ToolsData";
+import Toggle from "../../Buttons/Toggle/Toggle";
+import Modal from "../Modal/Modal";
+import useModal from "../Modal/useModal";
 
 const Skills = () => {
-  const [isClicked, setIsClicked] = useState();
   const [toggle, setToggle] = useState();
-  
+  const { isActive, handleModal } = useModal();
+
+  const animation = useAnimation();
 
   const handleClick = () => {
     setToggle(!toggle);
-  };
-  const handleGame = () => {
-    setIsClicked(!isClicked);
   };
 
   // Randomly Floating Icons /*************************/
@@ -74,21 +74,31 @@ const Skills = () => {
 
   // Randomly Floating Icons /*************************/
 
- 
   return (
     <Wrapper id="skills" ref={wrapperRef}>
       <Header>
         <Title>Skills</Title>
         <Menu>
+          <ContentButton
+            className="glow-on-hover"
+            onClick={() => handleModal(true)}
+            transition={{ delay: 1, duration: 0.6 }}
+            animate={animation}
+          >
+            Fancy a game?
+          </ContentButton>
           <Toggle handleClick={handleClick} />
-
-          <ButtonTwo onClick={handleGame}>
-            Fancy a game? {isClicked && <Timer />}
-          </ButtonTwo>
         </Menu>
       </Header>
       <Container>
         <Features />
+        {isActive && (
+          <Modal
+            isActive={isActive}
+            handleModal={handleModal}
+            headerTitle="Memory Game"
+          />
+        )}
         {!toggle && <Tools />}
       </Container>
     </Wrapper>

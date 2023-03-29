@@ -27,7 +27,7 @@ const ScrollTop = () => {
     <Button>
       <FaArrowCircleUp
         onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "none" }}
+        style={{ display: visible ? "inline" : "none", background:"transparent" }}
       />
     </Button>
   );
@@ -38,18 +38,18 @@ const Button = styled.div`
   width: fit-content;
   height: max-content;
   border-radius: 30px;
-  right: 5%;
+  right: 3%;
   bottom: 30px;
   font-size: 3rem;
   z-index: 99;
   cursor: pointer;
   background-image: linear-gradient(45deg, #febe10, #f3ec78);
-  
+
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   @media screen and (max-width: 767px) {
     font-size: 2rem;
-    left: 85%;
+    right: 3%;
   }
 `;
 

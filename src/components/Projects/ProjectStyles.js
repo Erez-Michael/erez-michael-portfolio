@@ -36,7 +36,7 @@ export const ContentColumn = styled(motion.div)`
   background-color: #485461;
   padding: 10px;
   flex: 1;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

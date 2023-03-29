@@ -1,23 +1,18 @@
-$toggle-width: 8rem;
 $slider-size: 3rem;
 $padding: 0.25rem;
 
-
-
 .Toggle {
-    z-index: 99;
     cursor: pointer;
   align-items: center;
 background-color:darken($color: green, $amount: 18%);  border: 1px solid #febe10;
   border-radius: 3rem;
   color: #fff;
   display: flex;
-  height: calc(#{$slider-size} + #{$padding * 3});
-  justify-content: space-around;
-  padding: 0.25rem;
+  height: 3.5rem;
   position: relative;
   transition: all 0.2s ease-out;
-  width: $toggle-width;
+  width: 6.5rem;
+  margin-left: 2rem;
 
   &--checked {
       
@@ -42,7 +37,7 @@ background-color:darken($color: green, $amount: 18%);  border: 1px solid #febe10
     width: $slider-size;
     position: absolute;
     transform: translateX(0);
-    transition: all 0.2s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 &__text {
@@ -54,7 +49,7 @@ background-color:darken($color: green, $amount: 18%);  border: 1px solid #febe10
   input:checked + .Toggle__slider {
     background-color: darken(#febe10, 15%);
     border: 1px solid darken(#434343, 5%);
-    transform: translateX(130%);
+    transform: translateX(100%);
   }
 
   input[type="checkbox"] {

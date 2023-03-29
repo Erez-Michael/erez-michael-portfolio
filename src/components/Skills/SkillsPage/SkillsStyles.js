@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -144,48 +145,67 @@ export const Title = styled.div`
 `;
 export const Menu = styled.div`
   background-color: #485461;
-  width: fit-content;
-  max-height: 100%;
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
-
-  .react-switch {
-    background-color: #485461;
-    border: solid red 2px;
-  }
 `;
 
-export const ButtonOne = styled.button`
-border: solid #febe10 1px;
-border-radius: 4rem;
-padding: 0.5rem;
-  cursor: pointer;
-  height: fit-content;
-  background-color: #485461;
-  color: #febe10;
-  margin-right: 30px;
+// export const ButtonOne = styled.button`
+// border: solid #febe10 1px;
+// border-radius: 4rem;
+// padding: 0.5rem;
+//   cursor: pointer;
+//   height: fit-content;
+//   background-color: #485461;
+//   color: #febe10;
+//   margin-right: 30px;
+//   width: fit-content;
+//   &:hover {
+//     color: #fffbe6;
+//   }
+// `;
+// export const ButtonTwo = styled.button`
+//   border: solid #febe10 1px;
+//   margin-left: 2rem;
+//   border-radius: 4rem;
+//   padding: 0.75rem;
+//   cursor: pointer;
+//   height: 3.5rem;
+//   background-color: #485461;
+//   color: #febe10;
+//   &:hover {
+//     color: #fffbe6;
+//   }
+// `;
+
+export const ContentButton = styled(motion.button)`
+  height: 3.5rem;
   width: fit-content;
-  &:hover {
-    color: #fffbe6;
-  }
-`;
-export const ButtonTwo = styled.button`
-  border: solid #febe10 1px;
-  border-radius: 4rem;
-  padding: 0.5rem;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   cursor: pointer;
-  height: fit-content;
   background-color: #485461;
   color: #febe10;
-  margin-left: 20px;
-  &:hover {
-    color: #fffbe6;
-  }
-`;
+  border: solid #febe10 1px;
+  border-radius: 2rem;
 
+  @media screen and (max-width: 1264px) {
+    padding: 16px 10px;
+  }
+  @media screen and (max-width: 1160px) {
+padding: 10px 6px;
+font-size: 0.6rem;
+height: 3rem;
+width: 10rem;
+}
+`;
 
 export const Container = styled.div`
   width: 100%;

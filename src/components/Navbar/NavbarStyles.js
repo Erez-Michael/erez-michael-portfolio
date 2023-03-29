@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 35%;
   left: 0;
-  
+  z-index:9;
 
   @media screen and (max-width: 768px) {
     position: relative;
@@ -16,19 +16,18 @@ export const Wrapper = styled.div`
 
 export const StyledNavbar = styled.div`
   width: 100%;
-  height: fit-content;
-`;
+  `;
 
 export const Logo = styled.div`
-  /*border: yellowgreen solid 2px;*/
+  /* border: solid red 2px; */
   position: fixed;
-  right: 48vw;
-  top: 2%;
-  width: 50vw;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 20px;
+  padding-left:1rem;
+  padding-top: 1rem;
   font-size: 3rem;
 
   
@@ -44,9 +43,11 @@ export const Logo = styled.div`
   div h2:nth-child(1) {
     cursor: pointer;
     color: #364853;
+    
   }
 
   div h2:nth-child(2) {
+    
     cursor: pointer;
     color: #febe10;
     transform: translate(0, -81px);
@@ -129,11 +130,13 @@ export const Logo = styled.div`
 `;
 
 export const Links = styled.div`
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 180px;
-  
+
+
   a {
     text-decoration: none;
     height: 35px;
@@ -145,12 +148,11 @@ export const Links = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
 
     @media screen and (max-height: 768px) {
       top: 70vh;
       transform: scale(0.8);
+      
     }
     @media screen and (max-height: 650px) {
       top: 65vh;
