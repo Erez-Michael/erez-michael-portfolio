@@ -1,9 +1,32 @@
-import React, { useEffect, useRef } from "react";
-import { Wrapper, Title, Container, Header, Menu, OptionOne, OptionTwo } from "./SkillsStyles";
-import Tools from "../../data/ToolsData";
+import React, { useRef, useEffect, useState } from "react";
+
+import {
+  Wrapper,
+  Title,
+  Container,
+  Header,
+  Menu,
+  ButtonOne,
+  ButtonTwo,
+} from "./SkillsStyles";
 import Features from "./Features";
+import Tools from "../../data/ToolsData";
+import Timer from "./Timer";
+import Toggle from "../Buttons/Toggle/Toggle";
 
 const Skills = () => {
+  const [isClicked, setIsClicked] = useState();
+  const [toggle, setToggle] = useState();
+  
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+  const handleGame = () => {
+    setIsClicked(!isClicked);
+  };
+
+  // Randomly Floating Icons /*************************/
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +43,7 @@ const Skills = () => {
     animateDiv("#k");
     animateDiv("#l");
     animateDiv("#m");
-  }, [10000]);
+  }, []);
 
   const makeNewPosition = () => {
     const wrapperElement = wrapperRef.current;
@@ -46,21 +69,27 @@ const Skills = () => {
 
     setTimeout(() => {
       animateDiv(myclass);
-    }, 5000);
+    }, 1500);
   };
 
+  // Randomly Floating Icons /*************************/
+
+ 
   return (
     <Wrapper id="skills" ref={wrapperRef}>
       <Header>
         <Title>Skills</Title>
         <Menu>
-          <OptionOne>Ghost Icons</OptionOne>
-          <OptionTwo>Fancy a game?</OptionTwo>
+          <Toggle handleClick={handleClick} />
+
+          <ButtonTwo onClick={handleGame}>
+            Fancy a game? {isClicked && <Timer />}
+          </ButtonTwo>
         </Menu>
       </Header>
       <Container>
         <Features />
-        <Tools />
+        {!toggle && <Tools />}
       </Container>
     </Wrapper>
   );

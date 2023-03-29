@@ -52,7 +52,7 @@ export const ProjectThree = ({
 
   return (
     <Section id="projects" inverse={inverse} ref={ref}>
-      <Container style={{marginBottom:"150px"}}>
+      <Container style={{ marginBottom: "150px" }}>
         <ContentRow reverse={reverse}>
           <ContentColumn>
             <TextWrapper>
@@ -88,7 +88,7 @@ export const ProjectThree = ({
                   inverse={inverse}
                   primary={primary}
                 >
-                  <a href="https://gogo-gadgets-e-commerce.vercel.app/">
+                  <a href="https://github.com/Erez-Michael/GoGoGadgets">
                     {buttonLabel}
                   </a>
                 </ContentButton>

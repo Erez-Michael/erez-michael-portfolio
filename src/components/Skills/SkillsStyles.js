@@ -9,106 +9,106 @@ export const Wrapper = styled.div`
 
   div.a {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
 
   div.b {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.c {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.d {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.e {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.f {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.g {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.h {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.i {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.j {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.k {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.l {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
   div.m {
     position: fixed;
-        opacity: 0.4;
+    opacity: 0.4;
 
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
     border-radius: 50%;
     height: 0%;
   }
@@ -144,16 +144,21 @@ export const Title = styled.div`
 `;
 export const Menu = styled.div`
   background-color: #485461;
- width: fit-content;
+  width: fit-content;
   max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-letter-spacing: 0.1rem;
-margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+
+  .react-switch {
+    background-color: #485461;
+    border: solid red 2px;
+  }
 `;
 
-export const OptionOne = styled.div`
+export const ButtonOne = styled.button`
 border: solid #febe10 1px;
 border-radius: 4rem;
 padding: 0.5rem;
@@ -167,7 +172,7 @@ padding: 0.5rem;
     color: #fffbe6;
   }
 `;
-export const OptionTwo = styled.div`
+export const ButtonTwo = styled.button`
   border: solid #febe10 1px;
   border-radius: 4rem;
   padding: 0.5rem;

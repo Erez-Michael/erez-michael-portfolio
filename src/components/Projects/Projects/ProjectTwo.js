@@ -88,7 +88,9 @@ export const ProjectTwo = ({
                   inverse={inverse}
                   primary={primary}
                 >
-                  <a href="https://river-quiver.vercel.app/">{buttonLabel}</a>
+                  <a href="https://www.youtube.com/watch?v=4rPKmIyhNkY">
+                    {buttonLabel}
+                  </a>
                 </ContentButton>
 
                 <GitIcon>

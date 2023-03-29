@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Section } from "../../../GlobalStyles";
-import "../../Buttons/QuoteButton.css";
+import "../../Buttons/ProjectButton/ProjectButton.css";
 import { BsGithub } from "react-icons/bs";
 import {
   Title,
