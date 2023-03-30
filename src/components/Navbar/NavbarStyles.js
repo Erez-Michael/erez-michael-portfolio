@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  /*border: solid blue 5px;*/
+  /* border: solid blue 5px; */
   display: flex;
   width: 35%;
   left: 0;
-  z-index:9;
-
+  z-index: 9;
   @media screen and (max-width: 768px) {
     position: relative;
     height: 10vh;
@@ -16,38 +15,28 @@ export const Wrapper = styled.div`
 
 export const StyledNavbar = styled.div`
   width: 100%;
-  `;
+  height: 0;
+`;
 
 export const Logo = styled.div`
   /* border: solid red 2px; */
   position: fixed;
-  width: fit-content;
-  height: fit-content;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding-left:1rem;
-  padding-top: 1rem;
-  font-size: 3rem;
 
-  
+  padding-left: 1rem;
+  font-size: 3rem;
 
   @media screen and (max-width: 768px) {
     position: relative;
-    left: 0;
-    height: fit-content;
+    height: 10vh;
   }
-
   /* ///////// Double wave animation //////////*/
-
   div h2:nth-child(1) {
     cursor: pointer;
     color: #364853;
-    
   }
-
   div h2:nth-child(2) {
-    
     cursor: pointer;
     color: #febe10;
     transform: translate(0, -81px);
@@ -68,7 +57,6 @@ export const Logo = styled.div`
         0% 100%
       );
     }
-
     50% {
       clip-path: polygon(
         0% 60%,
@@ -83,14 +71,11 @@ export const Logo = styled.div`
       );
     }
   }
-
   /* ////// HOVER /////////////////////// */
-
   div:hover h2:nth-child(1) {
     cursor: pointer;
     color: #febe10;
   }
-
   div:hover h2:nth-child(2) {
     cursor: pointer;
     color: #364853;
@@ -112,7 +97,6 @@ export const Logo = styled.div`
         0% 100%
       );
     }
-
     50% {
       clip-path: polygon(
         0% 60%,
@@ -130,13 +114,13 @@ export const Logo = styled.div`
 `;
 
 export const Links = styled.div`
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 180px;
-
-
+  height: 0px;
+  @media screen and (max-width: 768px) {
+    display: none !important;
+  }
   a {
     text-decoration: none;
     height: 35px;
@@ -148,33 +132,21 @@ export const Links = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media screen and (max-height: 768px) {
-      top: 70vh;
-      transform: scale(0.8);
-      
-    }
-    @media screen and (max-height: 650px) {
-      top: 65vh;
-      transform: scale(0.75);
-    }
+    margin-bottom: 3rem;
   }
   /* // Float & twisted animation // 
-
     transform: rotateX(-31deg) rotateZ(0deg);
     transform-style: preserve-3d;
     border-radius: 32px;
     box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
       28px 28px 28px 0 rgba(34, 33, 81, 0.25);
     transition: 0.4s ease-in-out transform, 1s ease-in-out box-shadow;
-
     &:hover {
       transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
       box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         54px 54px 28px -10px rgba(34, 33, 81, 0.15);
     }*/
   /** ////// SHAKE ANIMATION ////////// */
-
   a:hover {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     transform: translate3d(0, 0, 0);
@@ -186,18 +158,15 @@ export const Links = styled.div`
     90% {
       transform: translate3d(-1px, 0, 0);
     }
-
     20%,
     80% {
       transform: translate3d(2px, 0, 0);
     }
-
     30%,
     50%,
     70% {
       transform: translate3d(-4px, 0, 0);
     }
-
     40%,
     60% {
       transform: translate3d(4px, 0, 0);
@@ -205,17 +174,14 @@ export const Links = styled.div`
   }
 `;
 
-
-
 export const NavButton = styled.div`
-  /*border: yellowgreen solid 2px;*/
+  /* border: yellowgreen solid 2px; */
   position: fixed;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 20px;
-  width: 50vw;
+  width: 50%;
   font-size: 3rem;
   @media screen and (min-width: 768px) {
     display: none;

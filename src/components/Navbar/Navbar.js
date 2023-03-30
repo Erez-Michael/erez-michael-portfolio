@@ -36,11 +36,17 @@ const Navbar = () => {
     cursor: "pointer",
   };
   const CvStyle = {
-    fontSize: "18px",
+    fontSize: "20px",
+    fontFamily: "fantasy",
+    fontStyle: "oblique",
+    letterSpacing: "2px",
     color: "#eee",
     background: "#364853",
     borderRadius: "3px",
     cursor: "pointer",
+    paddingRight: "5px",
+    paddingTop: "5px",
+    paddingBottom: "5px",
   };
 
   return (

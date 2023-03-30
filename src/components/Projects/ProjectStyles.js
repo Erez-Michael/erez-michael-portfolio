@@ -75,11 +75,14 @@ width: 100%;
 `;
 
 export const ImgWrapper = styled(motion.div)`
+  background-color: black;
   display: flex;
   justify-content: "flex-end";
   max-height: 700px;
   justify-content: center;
   position: relative;
+  border: solid #febe10 1px;
+  padding: 2px;
   z-index: -1;
   /*box-shadow: 0px 8px 25px #eee;*/
   border-radius: 4px;
