@@ -72,6 +72,7 @@ const Skills = () => {
     }, 1500);
   };
 
+
   // Randomly Floating Icons /*************************/
 
   return (
@@ -96,7 +97,6 @@ const Skills = () => {
           <Modal
             isActive={isActive}
             handleModal={handleModal}
-            headerTitle="Memory Game"
           />
         )}
         {!toggle && <Tools />}
