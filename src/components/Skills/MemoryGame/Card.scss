@@ -1,21 +1,23 @@
 .card {
 z-index: 3;
+
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  box-shadow: 2px 2px 4px 4px #DEDEDE;
+
   transition: 0.3s;
   transform-style: preserve-3d;
   position: relative;
   cursor: pointer;
   
   img {
-  
-    width: 95%;
-    height: 95%;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
   }
   
   .card-face {
+    background: transparent ;
     backface-visibility: hidden;
     position: absolute;
     width: 100%;
@@ -35,4 +37,7 @@ z-index: 3;
     // visibility: hidden;
     opacity: 0;
   }
+
+  
+ 
 }

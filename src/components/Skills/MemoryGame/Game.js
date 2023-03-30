@@ -11,30 +11,38 @@ import Card from "./Card";
 import "./Game.scss";
 import GameBg from "./GameBg";
 
+import js from "../../../Assets/js.png"
+import auth0 from "../../../Assets/auth0.png";
+import css from "../../../Assets/css.png";
+import node from "../../../Assets/node.png";
+import scss from "../../../Assets/scss.png";
+import sc from "../../../Assets/sc.jpg";
+
+
 const uniqueCardsArray = [
   {
-    type: "Butter",
-    image: require("../../../Assets/e.jpg"),
+    type: "js",
+    image: js,
   },
   {
-    type: "ButterFree",
-    image: require("https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673462820/readme-icons/k1nlanmsi5rza2ecauie.svg"),
+    type: "auth0",
+    image: auth0,
   },
   {
-    type: "Charmander",
-    image: require("https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673462820/readme-icons/siodyp09azdsz6rlnsmt.svg"),
+    type: "css",
+    image: css,
   },
   {
-    type: "Squirtle",
-    image: require("https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673462818/readme-icons/yvwzjpvrqnybeh6xev66.svg"),
+    type: "node",
+    image: node,
   },
   {
-    type: "Pidgetto",
-    image: require("https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673462818/readme-icons/gvucbz7hljvdslzzq07d.svg"),
+    type: "sc",
+    image: sc,
   },
   {
-    type: "Bulbasaur",
-    image: require("https://res.cloudinary.com/dhcrarc6f/image/upload/v1676649490/insomnia-svgrepo-com_zju7i2.svg"),
+    type: "scss",
+    image: scss,
   },
 ];
 
@@ -183,7 +191,7 @@ const Game = () => {
             aria-describedby="alert-dialog-description"
           >
             <DialogTitle id="alert-dialog-title">
-              Hurray!!! You completed the challenge
+              Challenge: COMPLETED!
             </DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
