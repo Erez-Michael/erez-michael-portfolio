@@ -37,16 +37,16 @@ const Navbar = () => {
   };
   const CvStyle = {
     fontSize: "20px",
-    fontFamily: "fantasy",
+    fontFamily: "Faster One",
     fontStyle: "oblique",
     letterSpacing: "2px",
-    color: "#eee",
+    color: "whitesmoke",
     background: "#364853",
     borderRadius: "3px",
     cursor: "pointer",
     paddingRight: "5px",
-    paddingTop: "5px",
-    paddingBottom: "5px",
+    paddingTop: "6px",
+    paddingBottom: "6px",
   };
 
   return (
