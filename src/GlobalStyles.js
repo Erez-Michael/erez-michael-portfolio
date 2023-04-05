@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #cfccbe;
+    background-color: #d4d2c9;
     font-family: 'Trispace', sans-serif;
 
    
