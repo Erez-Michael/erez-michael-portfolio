@@ -171,9 +171,12 @@ export const ContentButton = styled(motion.button)`
     text-decoration: none;
     background-color: transparent;
     color: #febe10;
+    @media screen and (max-width: 768px) {
+      font-size: 0.6rem;
+      font-weight: 800;
+    }
   }
   @media screen and (max-width: 768px) {
     margin-right: 2rem;
   }
-
 `;
