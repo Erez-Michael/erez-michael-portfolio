@@ -8,14 +8,19 @@ export const Wrapper = styled.div`
   z-index: 9;
   @media screen and (max-width: 768px) {
     position: relative;
-    height: 10vh;
+    height: 13vh;
     width: 100%;
   }
 `;
 
 export const StyledNavbar = styled.div`
   width: 100%;
-  height: 0;
+  height: fit-content;
+  @media screen and (max-width: 768px) {
+    position: relative;
+    top: 15%;
+    left: 5%;
+  }
 `;
 
 export const Logo = styled.div`

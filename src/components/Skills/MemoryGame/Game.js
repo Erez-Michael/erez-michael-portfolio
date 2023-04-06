@@ -200,7 +200,7 @@ const Game = () => {
               </DialogContentText>
             </DialogContent>
             <DialogActions>
-              <button onClick={handleRestart}>Restart</button>
+              <button className="restart" onClick={handleRestart}>Restart</button>
             </DialogActions>
           </Dialog>
         </div>

@@ -116,19 +116,26 @@ export const Wrapper = styled.div`
 `;
 
 
+
 export const Header = styled.div`
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #485461;
   border-bottom: solid #febe10 0.1rem;
   margin: 0 12%;
+  padding-bottom: 5%;;
+  @media screen and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.div`
   width: 50%;
+  height: fit-content;
   background-color: #485461;
-  padding-bottom: 2rem;
   font-size: 3rem;
   text-shadow: rgb(254, 190, 16) 1px 0px 0px,
     rgb(254, 190, 16) 0.540302px 0.841471px 0px,
@@ -137,20 +144,47 @@ export const Title = styled.div`
     rgb(254, 190, 16) -0.653644px -0.756802px 0px,
     rgb(254, 190, 16) 0.283662px -0.958924px 0px,
     rgb(254, 190, 16) 0.96017px -0.279415px 0px;
+  @media screen and (max-width: 1264px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 100px) {
+    width: 35%;
+  }
   @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 568px) {
     display: flex;
-    justify-content: center;
-    padding-top: 12%;
+    justify-content: center;;
   }
 `;
 export const Menu = styled.div`
   background-color: #485461;
   width: 50%;
-  height: 100%;
+  height: fit-content;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
   letter-spacing: 0.1rem;
+  @media screen and (max-width: 1264px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 65%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 650px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
 `;
 
 // export const ButtonOne = styled.button`
@@ -182,13 +216,9 @@ export const Menu = styled.div`
 // `;
 
 export const ContentButton = styled(motion.button)`
+  display: flex;
   height: 3.5rem;
   width: fit-content;
-  padding: 16px 20px;
-  font-weight: 600;
-  font-size: 0.75em;
-  line-height: 18px;
-  letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
   background-color: #485461;
@@ -196,15 +226,27 @@ export const ContentButton = styled(motion.button)`
   border: solid #febe10 1px;
   border-radius: 2rem;
 
-  @media screen and (max-width: 1264px) {
-    padding: 16px 10px;
+  p {
+    background-color: transparent;
+    font-weight: 800;
+    font-size: 0.75em;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-top: 20%;
   }
-  @media screen and (max-width: 1160px) {
-padding: 10px 6px;
-font-size: 0.6rem;
-height: 3rem;
-width: 10rem;
-}
+
+  @media screen and (max-width: 1024px) {
+    height: 2rem;
+    font-size: 0.75em;
+    line-height: 12px;
+    letter-spacing: 1px;
+    p {
+      margin-top: 5%;
+    }
+  }
+  @media screen and (max-width: 568px) {
+    margin-bottom:5%;
+  }
 `;
 
 export const Container = styled.div`

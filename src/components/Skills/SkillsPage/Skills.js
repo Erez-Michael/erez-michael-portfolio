@@ -17,15 +17,12 @@ import Modal from "../Modal/Modal";
 import useModal from "../Modal/useModal";
 
 const Skills = () => {
-  const [toggle, setToggle] = useState();
+  const [value, setValue] = useState(false);
   const { isActive, handleModal } = useModal();
 
   const animation = useAnimation();
 
-  const handleClick = () => {
-    setToggle(!toggle);
-  };
-
+  
   // Randomly Floating Icons /*************************/
   const wrapperRef = useRef(null);
 
@@ -86,20 +83,22 @@ const Skills = () => {
             transition={{ delay: 1, duration: 0.6 }}
             animate={animation}
           >
+            <p>
             Fancy a game?
+
+            </p>
           </ContentButton>
-          <Toggle handleClick={handleClick} />
+          <Toggle
+            isOn={value}
+            onColor="#7a172f"
+            handleToggle={() => setValue(!value)}
+          />
         </Menu>
       </Header>
       <Container>
         <Features />
-        {isActive && (
-          <Modal
-            isActive={isActive}
-            handleModal={handleModal}
-          />
-        )}
-        {!toggle && <Tools />}
+        {isActive && <Modal isActive={isActive} handleModal={handleModal} />}
+        {!value && <Tools />}
       </Container>
     </Wrapper>
   );

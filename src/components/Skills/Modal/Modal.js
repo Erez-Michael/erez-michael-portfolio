@@ -16,7 +16,7 @@ export default function Modal({
           <div className="modal-section">
             <div className="modal-header">
               <h3 className="modal-header__title">{headerTitle}</h3>
-              <button onClick={() => handleModal(false)}>X</button>
+              <button className="close" onClick={() => handleModal(false)}>X</button>
             </div>
             <Game />
           </div>

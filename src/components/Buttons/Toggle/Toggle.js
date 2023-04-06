@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import "./Toggle.scss";
+import React from "react";
+import "./Toggle.css"
 
-const Toggle=({handleClick})=> {
-  const [checked, updateChecked] = useState();
-
-  
+const Toggle = ({ isOn, handleToggle, onColor }) => {
   return (
-    <label className={`Toggle ${checked ? "Toggle--checked" : ""}`}>
+    <>
       <input
+        checked={isOn}
+        onChange={handleToggle}
+        className="react-switch-checkbox"
+        id={`react-switch-new`}
         type="checkbox"
-        value={checked}
-        onChange={() => updateChecked(!checked)}
-        onClick={handleClick}
       />
-
-      <div className="Toggle__slider">
-     Ghost Icons</div>
-      <small className="Toggle__text">Off</small>
-      <small className="Toggle__text">On</small>
-    </label>
+      <label
+        style={{ background: isOn && onColor }}
+        className="react-switch-label"
+        htmlFor={`react-switch-new`}
+      >
+        <span className={`react-switch-button`} />
+      </label>
+    </>
   );
-}
+};
 
 export default Toggle;
