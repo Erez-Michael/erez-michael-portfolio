@@ -18,7 +18,7 @@ export const StyledNavbar = styled.div`
   height: fit-content;
   @media screen and (max-width: 768px) {
     position: relative;
-    top: 15%;
+    top: 5%;
     left: 5%;
   }
 `;
@@ -28,8 +28,6 @@ export const Logo = styled.div`
   position: fixed;
   display: flex;
   justify-content: flex-start;
-
-  padding-left: 1rem;
   font-size: 3rem;
 
   @media screen and (max-width: 768px) {
