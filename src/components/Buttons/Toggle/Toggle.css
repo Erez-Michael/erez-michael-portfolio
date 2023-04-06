@@ -12,7 +12,7 @@
     cursor: pointer;
     width: 8rem;
     height: 3.5rem;
-    background: grey;
+    background-color:#355E3B;
     border-radius: 100px;
     position: relative;
     transition: background-color 1s;
