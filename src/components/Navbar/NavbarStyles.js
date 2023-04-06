@@ -3,36 +3,50 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   /* border: solid blue 5px; */
   display: flex;
+  justify-content: space-between;
   width: 35%;
   left: 0;
   z-index: 9;
   @media screen and (max-width: 768px) {
     position: relative;
-    height: 13vh;
+    height: 10vh;
     width: 100%;
   }
 `;
 
-export const StyledNavbar = styled.div`
-  width: 100%;
-  height: fit-content;
-  @media screen and (max-width: 768px) {
-    position: relative;
-    top: 5%;
-    left: 5%;
-  }
-`;
+// export const StyledNavbar = styled.div`
+//   border: solid greenyellow 2px;
+// z-index:2;
+// height: 1vh;
+//   width: 100%;
+//   position: relative;
+//   top: 0.5%;
+//   left: 10%;
+//   @media screen and (max-width: 768px) {
+//     position: relative;
+//     top: 5%;
+//     left: 5%;
+//   }
+// `;
 
 export const Logo = styled.div`
   /* border: solid red 2px; */
   position: fixed;
+  top: 3%;
+  left: 3%;
+  height: 8vh;
   display: flex;
   justify-content: flex-start;
   font-size: 3rem;
 
   @media screen and (max-width: 768px) {
     position: relative;
-    height: 10vh;
+    left: 5%;
+    width: 30%;
+  }
+  @media screen and (max-width: 400px) {
+  
+    transform: scale(0.6);
   }
   /* ///////// Double wave animation //////////*/
   div h2:nth-child(1) {
@@ -191,7 +205,7 @@ export const NavButton = styled.div`
   }
   @media screen and (max-width: 768px) {
     position: relative;
-    right: 0;
+    right: 0 ;
     height: 100%;
   }
 `;

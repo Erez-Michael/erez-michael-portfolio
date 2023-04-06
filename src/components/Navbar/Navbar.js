@@ -53,14 +53,14 @@ const Navbar = () => {
     <>
       <Wrapper>
         <Menu />
-        <StyledNavbar>
+        {/* <StyledNavbar> */}
           <Logo>
             <div>
               <h2>EM.</h2>
               <h2>EM.</h2>
             </div>
           </Logo>
-        </StyledNavbar>
+        {/* </StyledNavbar> */}
         <Links>
           <a
             href="https://drive.google.com/file/d/1p9rpGfpQyOcMBg3hZ7pAyP01NFLcUZtZ/view?usp=sharing"
