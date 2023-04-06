@@ -6,6 +6,7 @@ import Skills from "../Skills/SkillsPage/Skills";
 import { ProjectOne } from "../Projects/Projects/ProjectOne";
 import { ProjectTwo } from "../Projects/Projects/ProjectTwo";
 import { ProjectThree } from "../Projects/Projects/ProjectThree";
+import Footer from "../Footer/Footer";
 
 const MainPage = () => {
   return (
@@ -15,6 +16,7 @@ const MainPage = () => {
       <ProjectTwo {...heroTwo} />
       <ProjectThree {...heroThree} />
       <Skills />
+      <Footer />
     </Wrapper>
   );
 };

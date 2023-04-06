@@ -58,6 +58,48 @@ export const Container = styled.div`
     margin-top: 5%;
   }
 `;
+export const LetterWrapper = styled.div`
+  display: flex;
+  background: #485461;
+`;
+
+export const LetterE = styled.div`
+  background: #485461;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+
+  /* Letter Outline */
+
+  text-shadow: rgb(254, 190, 16) 1px 0px 0px,
+    rgb(254, 190, 16) 0.540302px 0.841471px 0px,
+    rgb(254, 190, 16) -0.416147px 0.909297px 0px,
+    rgb(254, 190, 16) -0.989992px 0.14112px 0px,
+    rgb(254, 190, 16) -0.653644px -0.756802px 0px,
+    rgb(254, 190, 16) 0.283662px -0.958924px 0px,
+    rgb(254, 190, 16) 0.96017px -0.279415px 0px;
+  ///////////////////////////////////////////
+
+  animation-duration: 0s;
+  animation-name: letterSlide;
+
+  @keyframes letterSlide {
+    from {
+      transform: translate3d(-5000%, 0, 0);
+      visibility: visible;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+`;
+
+
+
 export const Title = styled.div`
   background: #485461;
   display: flex;
