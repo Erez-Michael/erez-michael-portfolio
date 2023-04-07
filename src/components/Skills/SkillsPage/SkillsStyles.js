@@ -155,7 +155,8 @@ export const Title = styled.div`
   }
   @media screen and (max-width: 568px) {
     display: flex;
-    justify-content: center;;
+    justify-content: center;
+    
   }
 `;
 export const Menu = styled.div`
@@ -245,7 +246,12 @@ export const ContentButton = styled(motion.button)`
     }
   }
   @media screen and (max-width: 568px) {
-    margin-bottom:5%;
+    margin-bottom: 10%;
+    height: 3rem;
+    font-size: 1em;
+    p{
+      margin-top:1.1rem; 
+    }
   }
 `;
 

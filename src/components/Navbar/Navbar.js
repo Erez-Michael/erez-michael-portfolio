@@ -1,21 +1,21 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Menu from "../Menu/Menu";
-import { BsLinkedin, BsFillEnvelopeFill  } from "react-icons/bs";
-
+import AnchorLink from "react-anchor-link-smooth-scroll-v2";
+import { BsLinkedin, BsFillEnvelopeFill } from "react-icons/bs";
 
 import {
   Wrapper,
   Logo,
   Links,
   NavButton,
-  StyledNavbar,
+  NavbarContainer,
+  NavbarExtendedContainer,
+  NavbarLinkExtendedOne,NavbarLinkExtendedTwo,NavbarLinkExtendedThree
 } from "./NavbarStyles";
-
-
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
-
+  const [extendNavbar, setExtendNavbar] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -25,8 +25,9 @@ const Navbar = () => {
     setIsHovering(false);
   };
 
-
-  
+  const closeNavbar = () => {
+    setExtendNavbar(!extendNavbar);
+  };
 
   const IconStyle = {
     fill: "#eee",
@@ -49,18 +50,21 @@ const Navbar = () => {
     paddingBottom: "6px",
   };
 
+  const anchorStyle = {
+    textDecoration: "none",
+    color: "#364853",
+  };
+
   return (
     <>
       <Wrapper>
         <Menu />
-        {/* <StyledNavbar> */}
-          <Logo>
-            <div>
-              <h2>EM.</h2>
-              <h2>EM.</h2>
-            </div>
-          </Logo>
-        {/* </StyledNavbar> */}
+        <Logo>
+          <div>
+            <h2>EM.</h2>
+            <h2>EM.</h2>
+          </div>
+        </Logo>
         <Links>
           <a
             href="https://drive.google.com/file/d/1p9rpGfpQyOcMBg3hZ7pAyP01NFLcUZtZ/view?usp=sharing"
@@ -87,8 +91,53 @@ const Navbar = () => {
             <BsFillEnvelopeFill size={32} style={IconStyle} />
           </a>
         </Links>
-        <NavButton>&#8801;</NavButton>
+
+        <NavButton
+          onClick={() => {
+            setExtendNavbar((current) => !current);
+          }}
+        >
+          {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
+        </NavButton>
       </Wrapper>
+      {extendNavbar && (
+        <NavbarExtendedContainer>
+          <NavbarLinkExtendedOne>
+            <AnchorLink
+              style={anchorStyle}
+              onClick={() => {
+                closeNavbar();
+              }}
+              href="#about"
+            >
+              Home
+            </AnchorLink>
+          </NavbarLinkExtendedOne>
+
+          <NavbarLinkExtendedTwo>
+            <AnchorLink
+              style={anchorStyle}
+              onClick={() => {
+                closeNavbar();
+              }}
+              href="#projects"
+            >
+              Projects
+            </AnchorLink>
+          </NavbarLinkExtendedTwo>
+          <NavbarLinkExtendedThree>
+            <AnchorLink
+              style={anchorStyle}
+              onClick={() => {
+                closeNavbar();
+              }}
+              href="#skills"
+            >
+              Skills
+            </AnchorLink>
+          </NavbarLinkExtendedThree>
+        </NavbarExtendedContainer>
+      )}
     </>
   );
 };

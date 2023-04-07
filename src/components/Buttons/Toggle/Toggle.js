@@ -16,7 +16,7 @@ const Toggle = ({ isOn, handleToggle, onColor }) => {
         className="react-switch-label"
         htmlFor={`react-switch-new`}
       >
-        <span className={`react-switch-button`} />
+        <span className={`react-switch-button`} >Ghost Icons</span>
       </label>
     </>
   );

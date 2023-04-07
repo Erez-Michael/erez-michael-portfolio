@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import AnchorLink from "react-anchor-link-smooth-scroll-v2";
+
 
 export const Wrapper = styled.div`
   /* border: solid blue 5px; */
@@ -13,6 +15,8 @@ export const Wrapper = styled.div`
     width: 100%;
   }
 `;
+
+
 
 // export const StyledNavbar = styled.div`
 //   border: solid greenyellow 2px;
@@ -41,6 +45,7 @@ export const Logo = styled.div`
 
   @media screen and (max-width: 768px) {
     position: relative;
+    top:0;
     left: 5%;
     width: 30%;
   }
@@ -144,7 +149,7 @@ export const Links = styled.div`
     width: 35px;
     position: relative;
     top: 75vh;
-    right: 50%;
+    right: -15vw;
     text-align: center;
     display: flex;
     align-items: center;
@@ -191,21 +196,68 @@ export const Links = styled.div`
   }
 `;
 
+
+
+export const OpenLinksButton = styled.button`
+  width: 80px;
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 45px;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const NavbarExtendedContainer = styled.div`
+  /* border: solid red 2px; */
+  height: 100vh;
+  width: 100vw;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  z-index: 9 !important;
+`;
+
 export const NavButton = styled.div`
   /* border: yellowgreen solid 2px; */
-  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 20px;
-  width: 50%;
+  width: fit-content;
   font-size: 3rem;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  cursor: pointer;
+ 
   @media screen and (max-width: 768px) {
     position: relative;
-    right: 0 ;
-    height: 100%;
+    right: 5%;
   }
 `;
+
+
+
+export const NavbarLinkExtendedOne = styled.div`
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: -10rem;
+  transition: all ease-in-out 1s;
+
+  &:hover {
+       transform: rotate(360deg);
+  }
+`;
+
+export const NavbarLinkExtendedTwo = styled(NavbarLinkExtendedOne)`
+`;
+
+export const NavbarLinkExtendedThree = styled(NavbarLinkExtendedOne)`
+`;
+
