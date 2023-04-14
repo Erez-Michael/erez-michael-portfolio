@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import AnchorLink from "react-anchor-link-smooth-scroll-v2";
+
 
 
 export const Wrapper = styled.div`
@@ -45,12 +45,12 @@ export const Logo = styled.div`
 
   @media screen and (max-width: 768px) {
     position: relative;
-    top:0;
+    top: 0;
     left: 5%;
     width: 30%;
+    transform: scale(0.8);
   }
   @media screen and (max-width: 400px) {
-  
     transform: scale(0.6);
   }
   /* ///////// Double wave animation //////////*/
@@ -149,7 +149,7 @@ export const Links = styled.div`
     width: 35px;
     position: relative;
     top: 75vh;
-    right: -15vw;
+    right: 2vw;
     text-align: center;
     display: flex;
     align-items: center;
@@ -232,7 +232,12 @@ export const NavButton = styled.div`
   width: fit-content;
   font-size: 3rem;
   cursor: pointer;
- 
+
+  @media screen and (min-width: 769px) {
+   display:none;
+
+  }
+
   @media screen and (max-width: 768px) {
     position: relative;
     right: 5%;

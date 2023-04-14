@@ -10,7 +10,9 @@ import {
   NavButton,
   NavbarContainer,
   NavbarExtendedContainer,
-  NavbarLinkExtendedOne,NavbarLinkExtendedTwo,NavbarLinkExtendedThree
+  NavbarLinkExtendedOne,
+  NavbarLinkExtendedTwo,
+  NavbarLinkExtendedThree,
 } from "./NavbarStyles";
 
 const Navbar = () => {
@@ -102,37 +104,31 @@ const Navbar = () => {
       </Wrapper>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtendedOne>
-            <AnchorLink
-              style={anchorStyle}
-              onClick={() => {
-                closeNavbar();
-              }}
-              href="#about"
-            >
-              Home
+          <NavbarLinkExtendedOne
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
+            <AnchorLink href="#about" style={anchorStyle}>
+              About
             </AnchorLink>
           </NavbarLinkExtendedOne>
 
-          <NavbarLinkExtendedTwo>
-            <AnchorLink
-              style={anchorStyle}
-              onClick={() => {
-                closeNavbar();
-              }}
-              href="#projects"
-            >
+          <NavbarLinkExtendedTwo
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
+            <AnchorLink href="#projects" style={anchorStyle}>
               Projects
             </AnchorLink>
           </NavbarLinkExtendedTwo>
-          <NavbarLinkExtendedThree>
-            <AnchorLink
-              style={anchorStyle}
-              onClick={() => {
-                closeNavbar();
-              }}
-              href="#skills"
-            >
+          <NavbarLinkExtendedThree
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
+            <AnchorLink href="#skills" style={anchorStyle}>
               Skills
             </AnchorLink>
           </NavbarLinkExtendedThree>
