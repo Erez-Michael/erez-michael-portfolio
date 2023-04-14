@@ -42,6 +42,7 @@ export const Logo = styled.div`
   display: flex;
   justify-content: flex-start;
   font-size: 3rem;
+  background-color: transparent;
 
   @media screen and (max-width: 768px) {
     position: relative;
@@ -52,6 +53,11 @@ export const Logo = styled.div`
   }
   @media screen and (max-width: 400px) {
     transform: scale(0.6);
+  }
+
+  div,
+  h2 {
+    background-color: transparent;
   }
   /* ///////// Double wave animation //////////*/
   div h2:nth-child(1) {

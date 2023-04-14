@@ -57,11 +57,35 @@ const Navbar = () => {
     color: "#364853",
   };
 
+  // LOGO slideRight on scroll after 2500px  ///////////////////////////////
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  const scrollFunction = () => {
+    if (
+      document.body.scrollTop > 2500 ||
+      document.documentElement.scrollTop > 2500
+    ) {
+      document.getElementById("logo").style.transform = "translate(500%)";
+    } else {
+      document.getElementById("logo").style.transform = "translate(0)";
+    }
+  };
+
+  const style = {
+    transition: "2s",
+    zIndex: "-2",
+  };
+
+  ////////////////////////////////////////////////////////////
+
   return (
     <>
       <Wrapper>
         <Menu />
-        <Logo>
+        <Logo id="logo" style={style}>
           <div>
             <h2>EM.</h2>
             <h2>EM.</h2>
